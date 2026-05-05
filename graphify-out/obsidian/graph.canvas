@@ -1,0 +1,1393 @@
+{
+  "nodes": [
+    {
+      "id": "g0",
+      "type": "group",
+      "label": "Watcher Update API",
+      "x": 0,
+      "y": 0,
+      "width": 880,
+      "height": 520,
+      "color": "1"
+    },
+    {
+      "id": "n_watcher_watcher_getwatcheroptions",
+      "type": "file",
+      "file": "graphify/obsidian/.GetWatcherOptions().md",
+      "x": 20,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_watcher_watcher_updateforaddpolicies",
+      "type": "file",
+      "file": "graphify/obsidian/.UpdateForAddPolicies().md",
+      "x": 220,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_watcher_watcher_updateforaddpolicy",
+      "type": "file",
+      "file": "graphify/obsidian/.UpdateForAddPolicy().md",
+      "x": 420,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_watcher_watcher_updateforremovefilteredpolicy",
+      "type": "file",
+      "file": "graphify/obsidian/.UpdateForRemoveFilteredPolicy().md",
+      "x": 20,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_watcher_watcher_updateforremovepolicies",
+      "type": "file",
+      "file": "graphify/obsidian/.UpdateForRemovePolicies().md",
+      "x": 220,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_watcher_watcher_updateforremovepolicy",
+      "type": "file",
+      "file": "graphify/obsidian/.UpdateForRemovePolicy().md",
+      "x": 420,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_watcher_watcher_updateforsavepolicy",
+      "type": "file",
+      "file": "graphify/obsidian/.UpdateForSavePolicy().md",
+      "x": 20,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_watcher_watcher_updateforupdatepolicies",
+      "type": "file",
+      "file": "graphify/obsidian/.UpdateForUpdatePolicies().md",
+      "x": 220,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_watcher_watcher_updateforupdatepolicy",
+      "type": "file",
+      "file": "graphify/obsidian/.UpdateForUpdatePolicy().md",
+      "x": 420,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_watcher_watcher_logrecord",
+      "type": "file",
+      "file": "graphify/obsidian/.logRecord().md",
+      "x": 20,
+      "y": 320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_watcher_watcher_unsubscribe",
+      "type": "file",
+      "file": "graphify/obsidian/.unsubscribe().md",
+      "x": 220,
+      "y": 320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_watcher_watcher",
+      "type": "file",
+      "file": "graphify/obsidian/Watcher.md",
+      "x": 420,
+      "y": 320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g1",
+      "type": "group",
+      "label": "README & Public Surface",
+      "x": 960,
+      "y": 0,
+      "width": 880,
+      "height": 520,
+      "color": "2"
+    },
+    {
+      "id": "n_readme_apache_2_license",
+      "type": "file",
+      "file": "graphify/obsidian/Apache 2.0 License.md",
+      "x": 980,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_readme_casbin",
+      "type": "file",
+      "file": "graphify/obsidian/Casbin.md",
+      "x": 1180,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_readme_enforcer",
+      "type": "file",
+      "file": "graphify/obsidian/Casbin Enforcer.md",
+      "x": 1380,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_readme_default_update_callback",
+      "type": "file",
+      "file": "graphify/obsidian/DefaultUpdateCallback.md",
+      "x": 980,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_readme_new_watcher",
+      "type": "file",
+      "file": "graphify/obsidian/NewWatcher.md",
+      "x": 1180,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_readme_new_watcher_with_cluster",
+      "type": "file",
+      "file": "graphify/obsidian/NewWatcherWithCluster.md",
+      "x": 1380,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_readme_redis",
+      "type": "file",
+      "file": "graphify/obsidian/Redis.md",
+      "x": 980,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_readme_redis_watcher",
+      "type": "file",
+      "file": "graphify/obsidian/Redis Watcher.md",
+      "x": 1180,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_readme_set_update_callback",
+      "type": "file",
+      "file": "graphify/obsidian/SetUpdateCallback.md",
+      "x": 1380,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_readme_set_watcher",
+      "type": "file",
+      "file": "graphify/obsidian/SetWatcher.md",
+      "x": 980,
+      "y": 320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_readme_watcher_options",
+      "type": "file",
+      "file": "graphify/obsidian/WatcherOptions_1.md",
+      "x": 1180,
+      "y": 320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_readme_go_redis",
+      "type": "file",
+      "file": "graphify/obsidian/go-redis.md",
+      "x": 1380,
+      "y": 320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g2",
+      "type": "group",
+      "label": "Watcher Impl & Message Codec",
+      "x": 1920,
+      "y": 0,
+      "width": 880,
+      "height": 520,
+      "color": "3"
+    },
+    {
+      "id": "n_watcher_msg_marshalbinary",
+      "type": "file",
+      "file": "graphify/obsidian/.MarshalBinary().md",
+      "x": 1940,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_watcher_msg_unmarshalbinary",
+      "type": "file",
+      "file": "graphify/obsidian/.UnmarshalBinary().md",
+      "x": 2140,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_watcher_watcher_initconfig",
+      "type": "file",
+      "file": "graphify/obsidian/.initConfig().md",
+      "x": 2340,
+      "y": 80,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_watcher_watcher_subscribe",
+      "type": "file",
+      "file": "graphify/obsidian/.subscribe().md",
+      "x": 1940,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_watcher_defaultupdatecallback",
+      "type": "file",
+      "file": "graphify/obsidian/DefaultUpdateCallback().md",
+      "x": 2140,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_watcher_msg",
+      "type": "file",
+      "file": "graphify/obsidian/MSG.md",
+      "x": 2340,
+      "y": 160,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_watcher_newpublishwatcher",
+      "type": "file",
+      "file": "graphify/obsidian/NewPublishWatcher().md",
+      "x": 1940,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_watcher_newwatcher",
+      "type": "file",
+      "file": "graphify/obsidian/NewWatcher().md",
+      "x": 2140,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_watcher_newwatcherwithcluster",
+      "type": "file",
+      "file": "graphify/obsidian/NewWatcherWithCluster().md",
+      "x": 2340,
+      "y": 240,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_watcher_updatetype",
+      "type": "file",
+      "file": "graphify/obsidian/UpdateType.md",
+      "x": 1940,
+      "y": 320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_watcher_go",
+      "type": "file",
+      "file": "graphify/obsidian/watcher.go.md",
+      "x": 2140,
+      "y": 320,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g3",
+      "type": "group",
+      "label": "Update Policy Tests",
+      "x": 0,
+      "y": 600,
+      "width": 880,
+      "height": 520,
+      "color": "4"
+    },
+    {
+      "id": "n_watcher_watcher_close",
+      "type": "file",
+      "file": "graphify/obsidian/.Close().md",
+      "x": 20,
+      "y": 680,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_watcher_test_testupdateforaddpolicies",
+      "type": "file",
+      "file": "graphify/obsidian/TestUpdateForAddPolicies().md",
+      "x": 220,
+      "y": 680,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_watcher_test_testupdateforaddpolicy",
+      "type": "file",
+      "file": "graphify/obsidian/TestUpdateForAddPolicy().md",
+      "x": 420,
+      "y": 680,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_watcher_test_testupdateforremovefilteredpolicy",
+      "type": "file",
+      "file": "graphify/obsidian/TestUpdateForRemoveFilteredPolicy().md",
+      "x": 20,
+      "y": 760,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_watcher_test_testupdateforremovepolicies",
+      "type": "file",
+      "file": "graphify/obsidian/TestUpdateForRemovePolicies().md",
+      "x": 220,
+      "y": 760,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_watcher_test_testupdateforremovepolicy",
+      "type": "file",
+      "file": "graphify/obsidian/TestUpdateForRemovePolicy().md",
+      "x": 420,
+      "y": 760,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_watcher_test_testupdateforupdatepolicies",
+      "type": "file",
+      "file": "graphify/obsidian/TestUpdateForUpdatePolicies().md",
+      "x": 20,
+      "y": 840,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_watcher_test_testupdateforupdatepolicy",
+      "type": "file",
+      "file": "graphify/obsidian/TestUpdateForUpdatePolicy().md",
+      "x": 220,
+      "y": 840,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_watcher_test_testupdatesavepolicy",
+      "type": "file",
+      "file": "graphify/obsidian/TestUpdateSavePolicy().md",
+      "x": 420,
+      "y": 840,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_watcher_test_initwatcherwithoptions",
+      "type": "file",
+      "file": "graphify/obsidian/initWatcherWithOptions().md",
+      "x": 20,
+      "y": 920,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_watcher_test_go",
+      "type": "file",
+      "file": "graphify/obsidian/watcher_test.go.md",
+      "x": 220,
+      "y": 920,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g4",
+      "type": "group",
+      "label": "Fork Branch Provenance",
+      "x": 960,
+      "y": 600,
+      "width": 660,
+      "height": 420,
+      "color": "5"
+    },
+    {
+      "id": "n_x_fork_head_bfe327c",
+      "type": "file",
+      "file": "graphify/obsidian/HEAD bfe327c (Go 1.20 upgrade).md",
+      "x": 980,
+      "y": 680,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_x_fork_rationale_no_rewrite",
+      "type": "file",
+      "file": "graphify/obsidian/Rationale no squashrebase, history preserved.md",
+      "x": 1180,
+      "y": 680,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_x_fork_rationale_naming",
+      "type": "file",
+      "file": "graphify/obsidian/Rationale unify default branch as main.md",
+      "x": 1380,
+      "y": 680,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_x_fork_upstream_casbin",
+      "type": "file",
+      "file": "graphify/obsidian/casbinredis-watcher (upstream).md",
+      "x": 980,
+      "y": 760,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_x_fork_intermediate_go_admin",
+      "type": "file",
+      "file": "graphify/obsidian/go-admin-teamredis-watcher (intermediate).md",
+      "x": 1180,
+      "y": 760,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_x_fork_main_branch",
+      "type": "file",
+      "file": "graphify/obsidian/main branch.md",
+      "x": 1380,
+      "y": 760,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_x_fork_branch_origin",
+      "type": "file",
+      "file": "graphify/obsidian/main branch origin record.md",
+      "x": 980,
+      "y": 840,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_x_fork_master_branch",
+      "type": "file",
+      "file": "graphify/obsidian/master branch.md",
+      "x": 1180,
+      "y": 840,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_x_fork_repo_miso168net",
+      "type": "file",
+      "file": "graphify/obsidian/miso168netfork260506-redis-watcher.md",
+      "x": 1380,
+      "y": 840,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g5",
+      "type": "group",
+      "label": "Core Watcher Tests",
+      "x": 1920,
+      "y": 600,
+      "width": 660,
+      "height": 420,
+      "color": "6"
+    },
+    {
+      "id": "n_watcher_watcher_setupdatecallback",
+      "type": "file",
+      "file": "graphify/obsidian/.SetUpdateCallback().md",
+      "x": 1940,
+      "y": 680,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_watcher_watcher_update",
+      "type": "file",
+      "file": "graphify/obsidian/.Update().md",
+      "x": 2140,
+      "y": 680,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_watcher_test_testupdate",
+      "type": "file",
+      "file": "graphify/obsidian/TestUpdate().md",
+      "x": 2340,
+      "y": 680,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_watcher_test_testwatcher",
+      "type": "file",
+      "file": "graphify/obsidian/TestWatcher().md",
+      "x": 1940,
+      "y": 760,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_watcher_test_testwatcherwithignoreselftrue",
+      "type": "file",
+      "file": "graphify/obsidian/TestWatcherWithIgnoreSelfTrue().md",
+      "x": 2140,
+      "y": 760,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_watcher_test_testwatcherwithingnoreselffalse",
+      "type": "file",
+      "file": "graphify/obsidian/TestWatcherWithIngnoreSelfFalse().md",
+      "x": 2340,
+      "y": 760,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_watcher_test_initwatcher",
+      "type": "file",
+      "file": "graphify/obsidian/initWatcher().md",
+      "x": 1940,
+      "y": 840,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "g6",
+      "type": "group",
+      "label": "Watcher Options Config",
+      "x": 0,
+      "y": 1200,
+      "width": 600,
+      "height": 400,
+      "color": "1"
+    },
+    {
+      "id": "n_options_watcheroptions",
+      "type": "file",
+      "file": "graphify/obsidian/WatcherOptions.md",
+      "x": 20,
+      "y": 1280,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_options_initconfig",
+      "type": "file",
+      "file": "graphify/obsidian/initConfig().md",
+      "x": 220,
+      "y": 1280,
+      "width": 180,
+      "height": 60
+    },
+    {
+      "id": "n_options_go",
+      "type": "file",
+      "file": "graphify/obsidian/options.go.md",
+      "x": 420,
+      "y": 1280,
+      "width": 180,
+      "height": 60
+    }
+  ],
+  "edges": [
+    {
+      "id": "e_options_go_options_watcheroptions",
+      "fromNode": "n_options_go",
+      "toNode": "n_options_watcheroptions",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_options_go_options_initconfig",
+      "fromNode": "n_options_go",
+      "toNode": "n_options_initconfig",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_go_watcher_watcher",
+      "fromNode": "n_watcher_go",
+      "toNode": "n_watcher_watcher",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_go_watcher_defaultupdatecallback",
+      "fromNode": "n_watcher_go",
+      "toNode": "n_watcher_defaultupdatecallback",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_go_watcher_msg",
+      "fromNode": "n_watcher_go",
+      "toNode": "n_watcher_msg",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_go_watcher_updatetype",
+      "fromNode": "n_watcher_go",
+      "toNode": "n_watcher_updatetype",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_go_watcher_newwatcher",
+      "fromNode": "n_watcher_go",
+      "toNode": "n_watcher_newwatcher",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_go_watcher_newwatcherwithcluster",
+      "fromNode": "n_watcher_go",
+      "toNode": "n_watcher_newwatcherwithcluster",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_go_watcher_newpublishwatcher",
+      "fromNode": "n_watcher_go",
+      "toNode": "n_watcher_newpublishwatcher",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_watcher_watcher_watcher_initconfig",
+      "fromNode": "n_watcher_watcher",
+      "toNode": "n_watcher_watcher_initconfig",
+      "label": "method [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_watcher_watcher_watcher_setupdatecallback",
+      "fromNode": "n_watcher_watcher",
+      "toNode": "n_watcher_watcher_setupdatecallback",
+      "label": "method [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_watcher_watcher_watcher_update",
+      "fromNode": "n_watcher_watcher",
+      "toNode": "n_watcher_watcher_update",
+      "label": "method [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_watcher_watcher_watcher_updateforaddpolicy",
+      "fromNode": "n_watcher_watcher",
+      "toNode": "n_watcher_watcher_updateforaddpolicy",
+      "label": "method [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_watcher_watcher_watcher_updateforremovepolicy",
+      "fromNode": "n_watcher_watcher",
+      "toNode": "n_watcher_watcher_updateforremovepolicy",
+      "label": "method [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_watcher_watcher_watcher_updateforremovefilteredpolicy",
+      "fromNode": "n_watcher_watcher",
+      "toNode": "n_watcher_watcher_updateforremovefilteredpolicy",
+      "label": "method [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_watcher_watcher_watcher_updateforsavepolicy",
+      "fromNode": "n_watcher_watcher",
+      "toNode": "n_watcher_watcher_updateforsavepolicy",
+      "label": "method [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_watcher_watcher_watcher_updateforaddpolicies",
+      "fromNode": "n_watcher_watcher",
+      "toNode": "n_watcher_watcher_updateforaddpolicies",
+      "label": "method [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_watcher_watcher_watcher_updateforremovepolicies",
+      "fromNode": "n_watcher_watcher",
+      "toNode": "n_watcher_watcher_updateforremovepolicies",
+      "label": "method [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_watcher_watcher_watcher_updateforupdatepolicy",
+      "fromNode": "n_watcher_watcher",
+      "toNode": "n_watcher_watcher_updateforupdatepolicy",
+      "label": "method [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_watcher_watcher_watcher_updateforupdatepolicies",
+      "fromNode": "n_watcher_watcher",
+      "toNode": "n_watcher_watcher_updateforupdatepolicies",
+      "label": "method [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_watcher_watcher_watcher_logrecord",
+      "fromNode": "n_watcher_watcher",
+      "toNode": "n_watcher_watcher_logrecord",
+      "label": "method [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_watcher_watcher_watcher_unsubscribe",
+      "fromNode": "n_watcher_watcher",
+      "toNode": "n_watcher_watcher_unsubscribe",
+      "label": "method [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_watcher_watcher_watcher_subscribe",
+      "fromNode": "n_watcher_watcher",
+      "toNode": "n_watcher_watcher_subscribe",
+      "label": "method [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_watcher_watcher_watcher_getwatcheroptions",
+      "fromNode": "n_watcher_watcher",
+      "toNode": "n_watcher_watcher_getwatcheroptions",
+      "label": "method [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_watcher_watcher_watcher_close",
+      "fromNode": "n_watcher_watcher",
+      "toNode": "n_watcher_watcher_close",
+      "label": "method [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_defaultupdatecallback_watcher_msg_unmarshalbinary",
+      "fromNode": "n_watcher_defaultupdatecallback",
+      "toNode": "n_watcher_msg_unmarshalbinary",
+      "label": "calls [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_defaultupdatecallback_watcher_test_initwatcherwithoptions",
+      "fromNode": "n_watcher_defaultupdatecallback",
+      "toNode": "n_watcher_test_initwatcherwithoptions",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_watcher_msg_watcher_msg_marshalbinary",
+      "fromNode": "n_watcher_msg",
+      "toNode": "n_watcher_msg_marshalbinary",
+      "label": "method [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_msg_watcher_msg_unmarshalbinary",
+      "fromNode": "n_watcher_msg",
+      "toNode": "n_watcher_msg_unmarshalbinary",
+      "label": "method [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_msg_unmarshalbinary_watcher_watcher_subscribe",
+      "fromNode": "n_watcher_msg_unmarshalbinary",
+      "toNode": "n_watcher_watcher_subscribe",
+      "label": "calls [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_msg_unmarshalbinary_watcher_test_testupdate",
+      "fromNode": "n_watcher_msg_unmarshalbinary",
+      "toNode": "n_watcher_test_testupdate",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_watcher_newwatcher_watcher_watcher_initconfig",
+      "fromNode": "n_watcher_newwatcher",
+      "toNode": "n_watcher_watcher_initconfig",
+      "label": "calls [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_newwatcher_watcher_watcher_subscribe",
+      "fromNode": "n_watcher_newwatcher",
+      "toNode": "n_watcher_watcher_subscribe",
+      "label": "calls [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_newwatcher_watcher_test_initwatcherwithoptions",
+      "fromNode": "n_watcher_newwatcher",
+      "toNode": "n_watcher_test_initwatcherwithoptions",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_watcher_newwatcherwithcluster_watcher_watcher_initconfig",
+      "fromNode": "n_watcher_newwatcherwithcluster",
+      "toNode": "n_watcher_watcher_initconfig",
+      "label": "calls [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_newwatcherwithcluster_watcher_watcher_subscribe",
+      "fromNode": "n_watcher_newwatcherwithcluster",
+      "toNode": "n_watcher_watcher_subscribe",
+      "label": "calls [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_newwatcherwithcluster_watcher_test_initwatcherwithoptions",
+      "fromNode": "n_watcher_newwatcherwithcluster",
+      "toNode": "n_watcher_test_initwatcherwithoptions",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_watcher_watcher_initconfig_watcher_watcher_setupdatecallback",
+      "fromNode": "n_watcher_watcher_initconfig",
+      "toNode": "n_watcher_watcher_setupdatecallback",
+      "label": "calls [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_watcher_initconfig_watcher_newpublishwatcher",
+      "fromNode": "n_watcher_watcher_initconfig",
+      "toNode": "n_watcher_newpublishwatcher",
+      "label": "calls [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_watcher_setupdatecallback_watcher_test_initwatcherwithoptions",
+      "fromNode": "n_watcher_watcher_setupdatecallback",
+      "toNode": "n_watcher_test_initwatcherwithoptions",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_watcher_watcher_setupdatecallback_watcher_test_testwatcher",
+      "fromNode": "n_watcher_watcher_setupdatecallback",
+      "toNode": "n_watcher_test_testwatcher",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_watcher_watcher_setupdatecallback_watcher_test_testwatcherwithingnoreselffalse",
+      "fromNode": "n_watcher_watcher_setupdatecallback",
+      "toNode": "n_watcher_test_testwatcherwithingnoreselffalse",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_watcher_watcher_setupdatecallback_watcher_test_testwatcherwithignoreselftrue",
+      "fromNode": "n_watcher_watcher_setupdatecallback",
+      "toNode": "n_watcher_test_testwatcherwithignoreselftrue",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_watcher_watcher_setupdatecallback_watcher_test_testupdate",
+      "fromNode": "n_watcher_watcher_setupdatecallback",
+      "toNode": "n_watcher_test_testupdate",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_watcher_watcher_update_watcher_watcher_logrecord",
+      "fromNode": "n_watcher_watcher_update",
+      "toNode": "n_watcher_watcher_logrecord",
+      "label": "calls [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_watcher_update_watcher_test_testwatcher",
+      "fromNode": "n_watcher_watcher_update",
+      "toNode": "n_watcher_test_testwatcher",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_watcher_watcher_update_watcher_test_testwatcherwithingnoreselffalse",
+      "fromNode": "n_watcher_watcher_update",
+      "toNode": "n_watcher_test_testwatcherwithingnoreselffalse",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_watcher_watcher_update_watcher_test_testwatcherwithignoreselftrue",
+      "fromNode": "n_watcher_watcher_update",
+      "toNode": "n_watcher_test_testwatcherwithignoreselftrue",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_watcher_watcher_update_watcher_test_testupdate",
+      "fromNode": "n_watcher_watcher_update",
+      "toNode": "n_watcher_test_testupdate",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_watcher_watcher_updateforaddpolicy_watcher_watcher_logrecord",
+      "fromNode": "n_watcher_watcher_updateforaddpolicy",
+      "toNode": "n_watcher_watcher_logrecord",
+      "label": "calls [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_watcher_updateforremovepolicy_watcher_watcher_logrecord",
+      "fromNode": "n_watcher_watcher_updateforremovepolicy",
+      "toNode": "n_watcher_watcher_logrecord",
+      "label": "calls [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_watcher_updateforremovefilteredpolicy_watcher_watcher_logrecord",
+      "fromNode": "n_watcher_watcher_updateforremovefilteredpolicy",
+      "toNode": "n_watcher_watcher_logrecord",
+      "label": "calls [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_watcher_updateforsavepolicy_watcher_watcher_logrecord",
+      "fromNode": "n_watcher_watcher_updateforsavepolicy",
+      "toNode": "n_watcher_watcher_logrecord",
+      "label": "calls [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_watcher_updateforaddpolicies_watcher_watcher_logrecord",
+      "fromNode": "n_watcher_watcher_updateforaddpolicies",
+      "toNode": "n_watcher_watcher_logrecord",
+      "label": "calls [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_watcher_updateforremovepolicies_watcher_watcher_logrecord",
+      "fromNode": "n_watcher_watcher_updateforremovepolicies",
+      "toNode": "n_watcher_watcher_logrecord",
+      "label": "calls [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_watcher_updateforupdatepolicy_watcher_watcher_logrecord",
+      "fromNode": "n_watcher_watcher_updateforupdatepolicy",
+      "toNode": "n_watcher_watcher_logrecord",
+      "label": "calls [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_watcher_updateforupdatepolicies_watcher_watcher_logrecord",
+      "fromNode": "n_watcher_watcher_updateforupdatepolicies",
+      "toNode": "n_watcher_watcher_logrecord",
+      "label": "calls [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_watcher_subscribe_watcher_watcher_close",
+      "fromNode": "n_watcher_watcher_subscribe",
+      "toNode": "n_watcher_watcher_close",
+      "label": "calls [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_watcher_close_watcher_test_testwatcher",
+      "fromNode": "n_watcher_watcher_close",
+      "toNode": "n_watcher_test_testwatcher",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_watcher_watcher_close_watcher_test_testwatcherwithingnoreselffalse",
+      "fromNode": "n_watcher_watcher_close",
+      "toNode": "n_watcher_test_testwatcherwithingnoreselffalse",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_watcher_watcher_close_watcher_test_testwatcherwithignoreselftrue",
+      "fromNode": "n_watcher_watcher_close",
+      "toNode": "n_watcher_test_testwatcherwithignoreselftrue",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_watcher_watcher_close_watcher_test_testupdate",
+      "fromNode": "n_watcher_watcher_close",
+      "toNode": "n_watcher_test_testupdate",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_watcher_watcher_close_watcher_test_testupdateforaddpolicy",
+      "fromNode": "n_watcher_watcher_close",
+      "toNode": "n_watcher_test_testupdateforaddpolicy",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_watcher_watcher_close_watcher_test_testupdateforremovepolicy",
+      "fromNode": "n_watcher_watcher_close",
+      "toNode": "n_watcher_test_testupdateforremovepolicy",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_watcher_watcher_close_watcher_test_testupdateforremovefilteredpolicy",
+      "fromNode": "n_watcher_watcher_close",
+      "toNode": "n_watcher_test_testupdateforremovefilteredpolicy",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_watcher_watcher_close_watcher_test_testupdatesavepolicy",
+      "fromNode": "n_watcher_watcher_close",
+      "toNode": "n_watcher_test_testupdatesavepolicy",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_watcher_watcher_close_watcher_test_testupdateforaddpolicies",
+      "fromNode": "n_watcher_watcher_close",
+      "toNode": "n_watcher_test_testupdateforaddpolicies",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_watcher_watcher_close_watcher_test_testupdateforremovepolicies",
+      "fromNode": "n_watcher_watcher_close",
+      "toNode": "n_watcher_test_testupdateforremovepolicies",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_watcher_watcher_close_watcher_test_testupdateforupdatepolicy",
+      "fromNode": "n_watcher_watcher_close",
+      "toNode": "n_watcher_test_testupdateforupdatepolicy",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_watcher_watcher_close_watcher_test_testupdateforupdatepolicies",
+      "fromNode": "n_watcher_watcher_close",
+      "toNode": "n_watcher_test_testupdateforupdatepolicies",
+      "label": "calls [INFERRED]"
+    },
+    {
+      "id": "e_watcher_test_go_watcher_test_initwatcherwithoptions",
+      "fromNode": "n_watcher_test_go",
+      "toNode": "n_watcher_test_initwatcherwithoptions",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_test_go_watcher_test_initwatcher",
+      "fromNode": "n_watcher_test_go",
+      "toNode": "n_watcher_test_initwatcher",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_test_go_watcher_test_testwatcher",
+      "fromNode": "n_watcher_test_go",
+      "toNode": "n_watcher_test_testwatcher",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_test_go_watcher_test_testwatcherwithingnoreselffalse",
+      "fromNode": "n_watcher_test_go",
+      "toNode": "n_watcher_test_testwatcherwithingnoreselffalse",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_test_go_watcher_test_testwatcherwithignoreselftrue",
+      "fromNode": "n_watcher_test_go",
+      "toNode": "n_watcher_test_testwatcherwithignoreselftrue",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_test_go_watcher_test_testupdate",
+      "fromNode": "n_watcher_test_go",
+      "toNode": "n_watcher_test_testupdate",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_test_go_watcher_test_testupdateforaddpolicy",
+      "fromNode": "n_watcher_test_go",
+      "toNode": "n_watcher_test_testupdateforaddpolicy",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_test_go_watcher_test_testupdateforremovepolicy",
+      "fromNode": "n_watcher_test_go",
+      "toNode": "n_watcher_test_testupdateforremovepolicy",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_test_go_watcher_test_testupdateforremovefilteredpolicy",
+      "fromNode": "n_watcher_test_go",
+      "toNode": "n_watcher_test_testupdateforremovefilteredpolicy",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_test_go_watcher_test_testupdatesavepolicy",
+      "fromNode": "n_watcher_test_go",
+      "toNode": "n_watcher_test_testupdatesavepolicy",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_test_go_watcher_test_testupdateforaddpolicies",
+      "fromNode": "n_watcher_test_go",
+      "toNode": "n_watcher_test_testupdateforaddpolicies",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_test_go_watcher_test_testupdateforremovepolicies",
+      "fromNode": "n_watcher_test_go",
+      "toNode": "n_watcher_test_testupdateforremovepolicies",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_test_go_watcher_test_testupdateforupdatepolicy",
+      "fromNode": "n_watcher_test_go",
+      "toNode": "n_watcher_test_testupdateforupdatepolicy",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_test_go_watcher_test_testupdateforupdatepolicies",
+      "fromNode": "n_watcher_test_go",
+      "toNode": "n_watcher_test_testupdateforupdatepolicies",
+      "label": "contains [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_test_initwatcherwithoptions_watcher_test_initwatcher",
+      "fromNode": "n_watcher_test_initwatcherwithoptions",
+      "toNode": "n_watcher_test_initwatcher",
+      "label": "calls [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_test_initwatcherwithoptions_watcher_test_testwatcherwithingnoreselffalse",
+      "fromNode": "n_watcher_test_initwatcherwithoptions",
+      "toNode": "n_watcher_test_testwatcherwithingnoreselffalse",
+      "label": "calls [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_test_initwatcherwithoptions_watcher_test_testwatcherwithignoreselftrue",
+      "fromNode": "n_watcher_test_initwatcherwithoptions",
+      "toNode": "n_watcher_test_testwatcherwithignoreselftrue",
+      "label": "calls [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_test_initwatcherwithoptions_watcher_test_testupdateforaddpolicy",
+      "fromNode": "n_watcher_test_initwatcherwithoptions",
+      "toNode": "n_watcher_test_testupdateforaddpolicy",
+      "label": "calls [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_test_initwatcherwithoptions_watcher_test_testupdateforremovepolicy",
+      "fromNode": "n_watcher_test_initwatcherwithoptions",
+      "toNode": "n_watcher_test_testupdateforremovepolicy",
+      "label": "calls [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_test_initwatcherwithoptions_watcher_test_testupdateforremovefilteredpolicy",
+      "fromNode": "n_watcher_test_initwatcherwithoptions",
+      "toNode": "n_watcher_test_testupdateforremovefilteredpolicy",
+      "label": "calls [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_test_initwatcherwithoptions_watcher_test_testupdatesavepolicy",
+      "fromNode": "n_watcher_test_initwatcherwithoptions",
+      "toNode": "n_watcher_test_testupdatesavepolicy",
+      "label": "calls [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_test_initwatcherwithoptions_watcher_test_testupdateforaddpolicies",
+      "fromNode": "n_watcher_test_initwatcherwithoptions",
+      "toNode": "n_watcher_test_testupdateforaddpolicies",
+      "label": "calls [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_test_initwatcherwithoptions_watcher_test_testupdateforremovepolicies",
+      "fromNode": "n_watcher_test_initwatcherwithoptions",
+      "toNode": "n_watcher_test_testupdateforremovepolicies",
+      "label": "calls [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_test_initwatcherwithoptions_watcher_test_testupdateforupdatepolicy",
+      "fromNode": "n_watcher_test_initwatcherwithoptions",
+      "toNode": "n_watcher_test_testupdateforupdatepolicy",
+      "label": "calls [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_test_initwatcherwithoptions_watcher_test_testupdateforupdatepolicies",
+      "fromNode": "n_watcher_test_initwatcherwithoptions",
+      "toNode": "n_watcher_test_testupdateforupdatepolicies",
+      "label": "calls [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_test_initwatcher_watcher_test_testwatcher",
+      "fromNode": "n_watcher_test_initwatcher",
+      "toNode": "n_watcher_test_testwatcher",
+      "label": "calls [EXTRACTED]"
+    },
+    {
+      "id": "e_watcher_test_initwatcher_watcher_test_testupdate",
+      "fromNode": "n_watcher_test_initwatcher",
+      "toNode": "n_watcher_test_testupdate",
+      "label": "calls [EXTRACTED]"
+    },
+    {
+      "id": "e_readme_redis_watcher_readme_redis",
+      "fromNode": "n_readme_redis_watcher",
+      "toNode": "n_readme_redis",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_readme_redis_watcher_readme_casbin",
+      "fromNode": "n_readme_redis_watcher",
+      "toNode": "n_readme_casbin",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_readme_redis_watcher_readme_go_redis",
+      "fromNode": "n_readme_redis_watcher",
+      "toNode": "n_readme_go_redis",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_readme_redis_watcher_readme_new_watcher",
+      "fromNode": "n_readme_redis_watcher",
+      "toNode": "n_readme_new_watcher",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_readme_redis_watcher_readme_new_watcher_with_cluster",
+      "fromNode": "n_readme_redis_watcher",
+      "toNode": "n_readme_new_watcher_with_cluster",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_readme_redis_watcher_readme_set_watcher",
+      "fromNode": "n_readme_redis_watcher",
+      "toNode": "n_readme_set_watcher",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_readme_redis_watcher_readme_set_update_callback",
+      "fromNode": "n_readme_redis_watcher",
+      "toNode": "n_readme_set_update_callback",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_readme_redis_watcher_readme_apache_2_license",
+      "fromNode": "n_readme_redis_watcher",
+      "toNode": "n_readme_apache_2_license",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_readme_redis_watcher_x_fork_upstream_casbin",
+      "fromNode": "n_readme_redis_watcher",
+      "toNode": "n_x_fork_upstream_casbin",
+      "label": "semantically_similar_to [INFERRED]"
+    },
+    {
+      "id": "e_readme_casbin_readme_enforcer",
+      "fromNode": "n_readme_casbin",
+      "toNode": "n_readme_enforcer",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_readme_new_watcher_readme_watcher_options",
+      "fromNode": "n_readme_new_watcher",
+      "toNode": "n_readme_watcher_options",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_readme_new_watcher_with_cluster_readme_watcher_options",
+      "fromNode": "n_readme_new_watcher_with_cluster",
+      "toNode": "n_readme_watcher_options",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_readme_set_watcher_readme_enforcer",
+      "fromNode": "n_readme_set_watcher",
+      "toNode": "n_readme_enforcer",
+      "label": "calls [EXTRACTED]"
+    },
+    {
+      "id": "e_readme_set_update_callback_readme_default_update_callback",
+      "fromNode": "n_readme_set_update_callback",
+      "toNode": "n_readme_default_update_callback",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_readme_default_update_callback_readme_enforcer",
+      "fromNode": "n_readme_default_update_callback",
+      "toNode": "n_readme_enforcer",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_x_fork_branch_origin_x_fork_rationale_no_rewrite",
+      "fromNode": "n_x_fork_branch_origin",
+      "toNode": "n_x_fork_rationale_no_rewrite",
+      "label": "rationale_for [EXTRACTED]"
+    },
+    {
+      "id": "e_x_fork_branch_origin_x_fork_repo_miso168net",
+      "fromNode": "n_x_fork_branch_origin",
+      "toNode": "n_x_fork_repo_miso168net",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_x_fork_main_branch_x_fork_master_branch",
+      "fromNode": "n_x_fork_main_branch",
+      "toNode": "n_x_fork_master_branch",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_x_fork_main_branch_x_fork_head_bfe327c",
+      "fromNode": "n_x_fork_main_branch",
+      "toNode": "n_x_fork_head_bfe327c",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_x_fork_main_branch_x_fork_repo_miso168net",
+      "fromNode": "n_x_fork_main_branch",
+      "toNode": "n_x_fork_repo_miso168net",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_x_fork_main_branch_x_fork_rationale_naming",
+      "fromNode": "n_x_fork_main_branch",
+      "toNode": "n_x_fork_rationale_naming",
+      "label": "rationale_for [EXTRACTED]"
+    },
+    {
+      "id": "e_x_fork_master_branch_x_fork_repo_miso168net",
+      "fromNode": "n_x_fork_master_branch",
+      "toNode": "n_x_fork_repo_miso168net",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_x_fork_repo_miso168net_x_fork_upstream_casbin",
+      "fromNode": "n_x_fork_repo_miso168net",
+      "toNode": "n_x_fork_upstream_casbin",
+      "label": "references [EXTRACTED]"
+    },
+    {
+      "id": "e_x_fork_repo_miso168net_x_fork_intermediate_go_admin",
+      "fromNode": "n_x_fork_repo_miso168net",
+      "toNode": "n_x_fork_intermediate_go_admin",
+      "label": "references [AMBIGUOUS]"
+    },
+    {
+      "id": "e_x_fork_upstream_casbin_x_fork_intermediate_go_admin",
+      "fromNode": "n_x_fork_upstream_casbin",
+      "toNode": "n_x_fork_intermediate_go_admin",
+      "label": "references [AMBIGUOUS]"
+    }
+  ]
+}
