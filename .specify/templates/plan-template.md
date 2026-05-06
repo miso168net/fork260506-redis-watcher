@@ -31,7 +31,25 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+Evaluate each gate. Mark PASS / FAIL / N/A with a one-line justification. Any FAIL must be
+recorded in `Complexity Tracking` below with a stated reason, or the plan is blocked.
+
+- **I. Library-First & Minimal Surface** — Does this plan add new exported identifiers? If
+  yes, justify why an existing function + new option field is insufficient.
+- **II. Test-First (NON-NEGOTIABLE)** — Does the plan list a failing test (in
+  `watcher_test.go` or sibling) that lands before the implementation? Doc-only or
+  dependency-bump exemptions must be stated explicitly.
+- **III. Upstream Compatibility** — Does this diverge from `casbin/redis-watcher` upstream?
+  If yes, name the fork-provenance document that records the divergence.
+- **IV. Observability via Callbacks** — Does every new code path that receives a Redis
+  message flow through the registered callback? List any error path that does not surface
+  via callback or error channel.
+- **V. Semantic Versioning Discipline** — Classify the change as MAJOR / MINOR / PATCH per
+  the constitution and confirm the module path (`/v2`) still applies.
+- **Technology Constraints** — Stays on Go 1.20 floor and `redis/go-redis/v9`? Any new
+  direct dependency listed and justified?
+- **Quality Gates** — Plan accounts for `go test ./...`, `go vet ./...`, `gofmt -l .` all
+  passing, and a `graphify update .` run if Go source files change structurally?
 
 ## Project Structure
 
