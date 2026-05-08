@@ -1,16 +1,16 @@
 ---
 source_file: "README.md"
 type: "document"
-community: "README & Public Surface"
+community: "Fork Provenance & README"
 tags:
   - graphify/document
   - graphify/EXTRACTED
-  - community/README_&_Public_Surface
+  - community/Fork_Provenance__README
 ---
 
 # go-redis
 
 ## Connections
-- [[Redis Watcher]] - `references` [EXTRACTED]
+- [[Redis Watcher (project)]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/README_&_Public_Surface
+#graphify/document #graphify/EXTRACTED #community/Fork_Provenance__README

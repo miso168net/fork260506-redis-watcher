@@ -1,16 +1,16 @@
 ---
 source_file: "x_fork.branch-origin.md"
-type: "document"
-community: "Fork Branch Provenance"
+type: "rationale"
+community: "Fork Provenance & README"
 tags:
-  - graphify/document
+  - graphify/rationale
   - graphify/EXTRACTED
-  - community/Fork_Branch_Provenance
+  - community/Fork_Provenance__README
 ---
 
 # Rationale: unify default branch as main
 
 ## Connections
-- [[main branch]] - `rationale_for` [EXTRACTED]
+- [[main branch origin record]] - `rationale_for` [EXTRACTED]
 
-#graphify/document #graphify/EXTRACTED #community/Fork_Branch_Provenance
+#graphify/rationale #graphify/EXTRACTED #community/Fork_Provenance__README

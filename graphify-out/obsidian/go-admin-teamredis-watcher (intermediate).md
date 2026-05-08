@@ -1,17 +1,16 @@
 ---
 source_file: "x_fork.branch-origin.md"
 type: "document"
-community: "Fork Branch Provenance"
+community: "Fork Provenance & README"
 tags:
   - graphify/document
-  - graphify/AMBIGUOUS
-  - community/Fork_Branch_Provenance
+  - graphify/EXTRACTED
+  - community/Fork_Provenance__README
 ---
 
 # go-admin-team/redis-watcher (intermediate)
 
 ## Connections
-- [[casbinredis-watcher (upstream)]] - `references` [AMBIGUOUS]
-- [[miso168netfork260506-redis-watcher]] - `references` [AMBIGUOUS]
+- [[main branch origin record]] - `references` [EXTRACTED]
 
-#graphify/document #graphify/AMBIGUOUS #community/Fork_Branch_Provenance
+#graphify/document #graphify/EXTRACTED #community/Fork_Provenance__README

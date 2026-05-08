@@ -1,12 +1,12 @@
 ---
 source_file: "watcher.go"
 type: "code"
-community: "Watcher Impl & Message Codec"
+community: "Options & Initialization"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Watcher_Impl_&_Message_Codec
+  - community/Options__Initialization
 ---
 
 # watcher.go
@@ -20,4 +20,4 @@ tags:
 - [[UpdateType]] - `contains` [EXTRACTED]
 - [[Watcher]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Watcher_Impl_&_Message_Codec
+#graphify/code #graphify/EXTRACTED #community/Options__Initialization

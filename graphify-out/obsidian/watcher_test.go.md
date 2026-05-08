@@ -1,12 +1,12 @@
 ---
 source_file: "watcher_test.go"
 type: "code"
-community: "Update Policy Tests"
+community: "Watcher Tests & Lifecycle"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Update_Policy_Tests
+  - community/Watcher_Tests__Lifecycle
 ---
 
 # watcher_test.go
@@ -27,4 +27,4 @@ tags:
 - [[initWatcher()]] - `contains` [EXTRACTED]
 - [[initWatcherWithOptions()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Update_Policy_Tests
+#graphify/code #graphify/EXTRACTED #community/Watcher_Tests__Lifecycle

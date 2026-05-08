@@ -1,19 +1,22 @@
 ---
 source_file: "watcher.go"
 type: "code"
-community: "Watcher Impl & Message Codec"
+community: "Subscribe & Default Callback"
 location: "L28"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Watcher_Impl_&_Message_Codec
+  - community/Subscribe__Default_Callback
 ---
 
 # DefaultUpdateCallback()
 
 ## Connections
 - [[.UnmarshalBinary()]] - `calls` [EXTRACTED]
-- [[initWatcherWithOptions()]] - `calls` [INFERRED]
+- [[FR-DefaultCallback (dispatch via Self)]] - `rationale_for` [EXTRACTED]
+- [[MSG.UnmarshalBinary]] - `calls` [EXTRACTED]
+- [[Redis Watcher (project)]] - `references` [EXTRACTED]
+- [[initWatcherWithOptions()]] - `calls` [EXTRACTED]
 - [[watcher.go]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Watcher_Impl_&_Message_Codec
+#graphify/code #graphify/EXTRACTED #community/Subscribe__Default_Callback

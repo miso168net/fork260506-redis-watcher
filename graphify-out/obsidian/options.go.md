@@ -1,12 +1,12 @@
 ---
 source_file: "options.go"
 type: "code"
-community: "Watcher Options Config"
+community: "Options & Initialization"
 location: "L1"
 tags:
   - graphify/code
   - graphify/EXTRACTED
-  - community/Watcher_Options_Config
+  - community/Options__Initialization
 ---
 
 # options.go
@@ -15,4 +15,4 @@ tags:
 - [[WatcherOptions]] - `contains` [EXTRACTED]
 - [[initConfig()]] - `contains` [EXTRACTED]
 
-#graphify/code #graphify/EXTRACTED #community/Watcher_Options_Config
+#graphify/code #graphify/EXTRACTED #community/Options__Initialization

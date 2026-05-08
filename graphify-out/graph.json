@@ -4,17 +4,49 @@
   "graph": {
     "hyperedges": [
       {
-        "id": "watcher_setup_flow",
-        "label": "Watcher setup flow (init -> bind enforcer -> set callback)",
+        "id": "policy_publish_pubsub_flow",
+        "label": "Policy publish/subscribe flow",
         "nodes": [
-          "readme_new_watcher",
-          "readme_set_watcher",
-          "readme_set_update_callback",
-          "readme_enforcer"
+          "watcher_subscribe",
+          "watcher_msg",
+          "watcher_defaultupdatecallback",
+          "watcher_setupdatecallback",
+          "watcher_updatetype"
         ],
+        "relation": "participate_in",
         "confidence": "EXTRACTED",
-        "confidence_score": 1.0,
-        "source_file": "README.md"
+        "confidence_score": 0.9,
+        "source_file": "watcher.go"
+      },
+      {
+        "id": "watcher_construction_paths",
+        "label": "Watcher construction paths (single, cluster, publish-only)",
+        "nodes": [
+          "watcher_newwatcher",
+          "watcher_newwatcherwithcluster",
+          "watcher_newpublishwatcher",
+          "watcher_initconfig",
+          "options_initconfig"
+        ],
+        "relation": "participate_in",
+        "confidence": "EXTRACTED",
+        "confidence_score": 0.9,
+        "source_file": "watcher.go"
+      },
+      {
+        "id": "retrospec_baseline_capture",
+        "label": "Retro spec baseline capture (design + sources)",
+        "nodes": [
+          "retrospec_design_doc",
+          "watcher_watcher",
+          "options_watcheroptions",
+          "watcher_msg",
+          "graphify_session_20260506"
+        ],
+        "relation": "form",
+        "confidence": "INFERRED",
+        "confidence_score": 0.85,
+        "source_file": "docs/superpowers/specs/2026-05-07-redis-watcher-retro-spec-design.md"
       }
     ]
   },
@@ -25,7 +57,7 @@
       "source_file": "options.go",
       "source_location": "L1",
       "id": "options_go",
-      "community": 6,
+      "community": 1,
       "norm_label": "options.go"
     },
     {
@@ -34,7 +66,7 @@
       "source_file": "options.go",
       "source_location": "L8",
       "id": "options_watcheroptions",
-      "community": 6,
+      "community": 1,
       "norm_label": "watcheroptions"
     },
     {
@@ -43,7 +75,7 @@
       "source_file": "options.go",
       "source_location": "L19",
       "id": "options_initconfig",
-      "community": 6,
+      "community": 1,
       "norm_label": "initconfig()"
     },
     {
@@ -52,7 +84,7 @@
       "source_file": "watcher.go",
       "source_location": "L1",
       "id": "watcher_go",
-      "community": 2,
+      "community": 1,
       "norm_label": "watcher.go"
     },
     {
@@ -61,7 +93,7 @@
       "source_file": "watcher.go",
       "source_location": "L18",
       "id": "watcher_watcher",
-      "community": 0,
+      "community": 2,
       "norm_label": "watcher"
     },
     {
@@ -70,7 +102,7 @@
       "source_file": "watcher.go",
       "source_location": "L28",
       "id": "watcher_defaultupdatecallback",
-      "community": 2,
+      "community": 5,
       "norm_label": "defaultupdatecallback()"
     },
     {
@@ -79,7 +111,7 @@
       "source_file": "watcher.go",
       "source_location": "L69",
       "id": "watcher_msg",
-      "community": 2,
+      "community": 3,
       "norm_label": "msg"
     },
     {
@@ -88,7 +120,7 @@
       "source_file": "watcher.go",
       "source_location": "L82",
       "id": "watcher_updatetype",
-      "community": 2,
+      "community": 1,
       "norm_label": "updatetype"
     },
     {
@@ -97,7 +129,7 @@
       "source_file": "watcher.go",
       "source_location": "L96",
       "id": "watcher_msg_marshalbinary",
-      "community": 2,
+      "community": 3,
       "norm_label": ".marshalbinary()"
     },
     {
@@ -106,7 +138,7 @@
       "source_file": "watcher.go",
       "source_location": "L101",
       "id": "watcher_msg_unmarshalbinary",
-      "community": 2,
+      "community": 5,
       "norm_label": ".unmarshalbinary()"
     },
     {
@@ -115,7 +147,7 @@
       "source_file": "watcher.go",
       "source_location": "L114",
       "id": "watcher_newwatcher",
-      "community": 2,
+      "community": 1,
       "norm_label": "newwatcher()"
     },
     {
@@ -124,7 +156,7 @@
       "source_file": "watcher.go",
       "source_location": "L145",
       "id": "watcher_newwatcherwithcluster",
-      "community": 2,
+      "community": 1,
       "norm_label": "newwatcherwithcluster()"
     },
     {
@@ -133,7 +165,7 @@
       "source_file": "watcher.go",
       "source_location": "L182",
       "id": "watcher_watcher_initconfig",
-      "community": 2,
+      "community": 1,
       "norm_label": ".initconfig()"
     },
     {
@@ -142,7 +174,7 @@
       "source_file": "watcher.go",
       "source_location": "L218",
       "id": "watcher_newpublishwatcher",
-      "community": 2,
+      "community": 1,
       "norm_label": "newpublishwatcher()"
     },
     {
@@ -151,7 +183,7 @@
       "source_file": "watcher.go",
       "source_location": "L234",
       "id": "watcher_watcher_setupdatecallback",
-      "community": 5,
+      "community": 0,
       "norm_label": ".setupdatecallback()"
     },
     {
@@ -160,7 +192,7 @@
       "source_file": "watcher.go",
       "source_location": "L243",
       "id": "watcher_watcher_update",
-      "community": 5,
+      "community": 0,
       "norm_label": ".update()"
     },
     {
@@ -169,7 +201,7 @@
       "source_file": "watcher.go",
       "source_location": "L260",
       "id": "watcher_watcher_updateforaddpolicy",
-      "community": 0,
+      "community": 2,
       "norm_label": ".updateforaddpolicy()"
     },
     {
@@ -178,7 +210,7 @@
       "source_file": "watcher.go",
       "source_location": "L279",
       "id": "watcher_watcher_updateforremovepolicy",
-      "community": 0,
+      "community": 2,
       "norm_label": ".updateforremovepolicy()"
     },
     {
@@ -187,7 +219,7 @@
       "source_file": "watcher.go",
       "source_location": "L299",
       "id": "watcher_watcher_updateforremovefilteredpolicy",
-      "community": 0,
+      "community": 2,
       "norm_label": ".updateforremovefilteredpolicy()"
     },
     {
@@ -196,7 +228,7 @@
       "source_file": "watcher.go",
       "source_location": "L320",
       "id": "watcher_watcher_updateforsavepolicy",
-      "community": 0,
+      "community": 2,
       "norm_label": ".updateforsavepolicy()"
     },
     {
@@ -205,7 +237,7 @@
       "source_file": "watcher.go",
       "source_location": "L337",
       "id": "watcher_watcher_updateforaddpolicies",
-      "community": 0,
+      "community": 2,
       "norm_label": ".updateforaddpolicies()"
     },
     {
@@ -214,7 +246,7 @@
       "source_file": "watcher.go",
       "source_location": "L357",
       "id": "watcher_watcher_updateforremovepolicies",
-      "community": 0,
+      "community": 2,
       "norm_label": ".updateforremovepolicies()"
     },
     {
@@ -223,7 +255,7 @@
       "source_file": "watcher.go",
       "source_location": "L377",
       "id": "watcher_watcher_updateforupdatepolicy",
-      "community": 0,
+      "community": 2,
       "norm_label": ".updateforupdatepolicy()"
     },
     {
@@ -232,7 +264,7 @@
       "source_file": "watcher.go",
       "source_location": "L398",
       "id": "watcher_watcher_updateforupdatepolicies",
-      "community": 0,
+      "community": 2,
       "norm_label": ".updateforupdatepolicies()"
     },
     {
@@ -241,7 +273,7 @@
       "source_file": "watcher.go",
       "source_location": "L417",
       "id": "watcher_watcher_logrecord",
-      "community": 0,
+      "community": 2,
       "norm_label": ".logrecord()"
     },
     {
@@ -250,7 +282,7 @@
       "source_file": "watcher.go",
       "source_location": "L425",
       "id": "watcher_watcher_unsubscribe",
-      "community": 0,
+      "community": 2,
       "norm_label": ".unsubscribe()"
     },
     {
@@ -259,7 +291,7 @@
       "source_file": "watcher.go",
       "source_location": "L429",
       "id": "watcher_watcher_subscribe",
-      "community": 2,
+      "community": 5,
       "norm_label": ".subscribe()"
     },
     {
@@ -268,7 +300,7 @@
       "source_file": "watcher.go",
       "source_location": "L474",
       "id": "watcher_watcher_getwatcheroptions",
-      "community": 0,
+      "community": 2,
       "norm_label": ".getwatcheroptions()"
     },
     {
@@ -277,7 +309,7 @@
       "source_file": "watcher.go",
       "source_location": "L480",
       "id": "watcher_watcher_close",
-      "community": 3,
+      "community": 0,
       "norm_label": ".close()"
     },
     {
@@ -286,7 +318,7 @@
       "source_file": "watcher_test.go",
       "source_location": "L1",
       "id": "watcher_test_go",
-      "community": 3,
+      "community": 0,
       "norm_label": "watcher_test.go"
     },
     {
@@ -295,7 +327,7 @@
       "source_file": "watcher_test.go",
       "source_location": "L16",
       "id": "watcher_test_initwatcherwithoptions",
-      "community": 3,
+      "community": 0,
       "norm_label": "initwatcherwithoptions()"
     },
     {
@@ -304,7 +336,7 @@
       "source_file": "watcher_test.go",
       "source_location": "L42",
       "id": "watcher_test_initwatcher",
-      "community": 5,
+      "community": 0,
       "norm_label": "initwatcher()"
     },
     {
@@ -313,7 +345,7 @@
       "source_file": "watcher_test.go",
       "source_location": "L46",
       "id": "watcher_test_testwatcher",
-      "community": 5,
+      "community": 0,
       "norm_label": "testwatcher()"
     },
     {
@@ -322,7 +354,7 @@
       "source_file": "watcher_test.go",
       "source_location": "L56",
       "id": "watcher_test_testwatcherwithingnoreselffalse",
-      "community": 5,
+      "community": 0,
       "norm_label": "testwatcherwithingnoreselffalse()"
     },
     {
@@ -331,7 +363,7 @@
       "source_file": "watcher_test.go",
       "source_location": "L75",
       "id": "watcher_test_testwatcherwithignoreselftrue",
-      "community": 5,
+      "community": 0,
       "norm_label": "testwatcherwithignoreselftrue()"
     },
     {
@@ -340,7 +372,7 @@
       "source_file": "watcher_test.go",
       "source_location": "L91",
       "id": "watcher_test_testupdate",
-      "community": 5,
+      "community": 0,
       "norm_label": "testupdate()"
     },
     {
@@ -349,7 +381,7 @@
       "source_file": "watcher_test.go",
       "source_location": "L110",
       "id": "watcher_test_testupdateforaddpolicy",
-      "community": 3,
+      "community": 0,
       "norm_label": "testupdateforaddpolicy()"
     },
     {
@@ -358,7 +390,7 @@
       "source_file": "watcher_test.go",
       "source_location": "L132",
       "id": "watcher_test_testupdateforremovepolicy",
-      "community": 3,
+      "community": 0,
       "norm_label": "testupdateforremovepolicy()"
     },
     {
@@ -367,7 +399,7 @@
       "source_file": "watcher_test.go",
       "source_location": "L154",
       "id": "watcher_test_testupdateforremovefilteredpolicy",
-      "community": 3,
+      "community": 0,
       "norm_label": "testupdateforremovefilteredpolicy()"
     },
     {
@@ -376,7 +408,7 @@
       "source_file": "watcher_test.go",
       "source_location": "L176",
       "id": "watcher_test_testupdatesavepolicy",
-      "community": 3,
+      "community": 0,
       "norm_label": "testupdatesavepolicy()"
     },
     {
@@ -385,7 +417,7 @@
       "source_file": "watcher_test.go",
       "source_location": "L198",
       "id": "watcher_test_testupdateforaddpolicies",
-      "community": 3,
+      "community": 0,
       "norm_label": "testupdateforaddpolicies()"
     },
     {
@@ -394,7 +426,7 @@
       "source_file": "watcher_test.go",
       "source_location": "L227",
       "id": "watcher_test_testupdateforremovepolicies",
-      "community": 3,
+      "community": 0,
       "norm_label": "testupdateforremovepolicies()"
     },
     {
@@ -403,7 +435,7 @@
       "source_file": "watcher_test.go",
       "source_location": "L256",
       "id": "watcher_test_testupdateforupdatepolicy",
-      "community": 3,
+      "community": 0,
       "norm_label": "testupdateforupdatepolicy()"
     },
     {
@@ -412,11 +444,232 @@
       "source_file": "watcher_test.go",
       "source_location": "L279",
       "id": "watcher_test_testupdateforupdatepolicies",
-      "community": 3,
+      "community": 0,
       "norm_label": "testupdateforupdatepolicies()"
     },
     {
-      "label": "Redis Watcher",
+      "label": "Watcher.SetUpdateCallback",
+      "file_type": "code",
+      "source_file": "watcher.go",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "watcher_setupdatecallback",
+      "community": 1,
+      "norm_label": "watcher.setupdatecallback"
+    },
+    {
+      "label": "Watcher.initConfig",
+      "file_type": "code",
+      "source_file": "watcher.go",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "watcher_initconfig",
+      "community": 1,
+      "norm_label": "watcher.initconfig"
+    },
+    {
+      "label": "Watcher.subscribe",
+      "file_type": "code",
+      "source_file": "watcher.go",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "watcher_subscribe",
+      "community": 1,
+      "norm_label": "watcher.subscribe"
+    },
+    {
+      "label": "Watcher.logRecord",
+      "file_type": "code",
+      "source_file": "watcher.go",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "watcher_logrecord",
+      "community": 3,
+      "norm_label": "watcher.logrecord"
+    },
+    {
+      "label": "Watcher.Update",
+      "file_type": "code",
+      "source_file": "watcher.go",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "watcher_update",
+      "community": 3,
+      "norm_label": "watcher.update"
+    },
+    {
+      "label": "Watcher.UpdateForAddPolicy",
+      "file_type": "code",
+      "source_file": "watcher.go",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "watcher_updateforaddpolicy",
+      "community": 3,
+      "norm_label": "watcher.updateforaddpolicy"
+    },
+    {
+      "label": "Watcher.UpdateForRemovePolicy",
+      "file_type": "code",
+      "source_file": "watcher.go",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "watcher_updateforremovepolicy",
+      "community": 3,
+      "norm_label": "watcher.updateforremovepolicy"
+    },
+    {
+      "label": "Watcher.UpdateForRemoveFilteredPolicy",
+      "file_type": "code",
+      "source_file": "watcher.go",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "watcher_updateforremovefilteredpolicy",
+      "community": 3,
+      "norm_label": "watcher.updateforremovefilteredpolicy"
+    },
+    {
+      "label": "Watcher.UpdateForSavePolicy",
+      "file_type": "code",
+      "source_file": "watcher.go",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "watcher_updateforsavepolicy",
+      "community": 3,
+      "norm_label": "watcher.updateforsavepolicy"
+    },
+    {
+      "label": "Watcher.UpdateForAddPolicies",
+      "file_type": "code",
+      "source_file": "watcher.go",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "watcher_updateforaddpolicies",
+      "community": 3,
+      "norm_label": "watcher.updateforaddpolicies"
+    },
+    {
+      "label": "Watcher.UpdateForRemovePolicies",
+      "file_type": "code",
+      "source_file": "watcher.go",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "watcher_updateforremovepolicies",
+      "community": 3,
+      "norm_label": "watcher.updateforremovepolicies"
+    },
+    {
+      "label": "Watcher.UpdateForUpdatePolicy",
+      "file_type": "code",
+      "source_file": "watcher.go",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "watcher_updateforupdatepolicy",
+      "community": 3,
+      "norm_label": "watcher.updateforupdatepolicy"
+    },
+    {
+      "label": "Watcher.UpdateForUpdatePolicies",
+      "file_type": "code",
+      "source_file": "watcher.go",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "watcher_updateforupdatepolicies",
+      "community": 3,
+      "norm_label": "watcher.updateforupdatepolicies"
+    },
+    {
+      "label": "Watcher.Close",
+      "file_type": "code",
+      "source_file": "watcher.go",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "watcher_close",
+      "community": 0,
+      "norm_label": "watcher.close"
+    },
+    {
+      "label": "MSG.MarshalBinary",
+      "file_type": "code",
+      "source_file": "watcher.go",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "watcher_marshalbinary",
+      "community": 3,
+      "norm_label": "msg.marshalbinary"
+    },
+    {
+      "label": "MSG.UnmarshalBinary",
+      "file_type": "code",
+      "source_file": "watcher.go",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "watcher_unmarshalbinary",
+      "community": 3,
+      "norm_label": "msg.unmarshalbinary"
+    },
+    {
+      "label": "Project graphify rules (CLAUDE.md)",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "claude_md_graphify_rules",
+      "community": 2,
+      "norm_label": "project graphify rules (claude.md)"
+    },
+    {
+      "label": "Redis Watcher (project)",
       "file_type": "document",
       "source_file": "README.md",
       "source_location": null,
@@ -425,21 +678,8 @@
       "author": null,
       "contributor": null,
       "id": "readme_redis_watcher",
-      "community": 1,
-      "norm_label": "redis watcher"
-    },
-    {
-      "label": "Redis",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "readme_redis",
-      "community": 1,
-      "norm_label": "redis"
+      "community": 4,
+      "norm_label": "redis watcher (project)"
     },
     {
       "label": "Casbin",
@@ -451,7 +691,7 @@
       "author": null,
       "contributor": null,
       "id": "readme_casbin",
-      "community": 1,
+      "community": 4,
       "norm_label": "casbin"
     },
     {
@@ -464,86 +704,8 @@
       "author": null,
       "contributor": null,
       "id": "readme_go_redis",
-      "community": 1,
+      "community": 4,
       "norm_label": "go-redis"
-    },
-    {
-      "label": "NewWatcher",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "readme_new_watcher",
-      "community": 1,
-      "norm_label": "newwatcher"
-    },
-    {
-      "label": "NewWatcherWithCluster",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "readme_new_watcher_with_cluster",
-      "community": 1,
-      "norm_label": "newwatcherwithcluster"
-    },
-    {
-      "label": "WatcherOptions",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "readme_watcher_options",
-      "community": 1,
-      "norm_label": "watcheroptions"
-    },
-    {
-      "label": "SetWatcher",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "readme_set_watcher",
-      "community": 1,
-      "norm_label": "setwatcher"
-    },
-    {
-      "label": "SetUpdateCallback",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "readme_set_update_callback",
-      "community": 1,
-      "norm_label": "setupdatecallback"
-    },
-    {
-      "label": "DefaultUpdateCallback",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "readme_default_update_callback",
-      "community": 1,
-      "norm_label": "defaultupdatecallback"
     },
     {
       "label": "Apache 2.0 License",
@@ -554,22 +716,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "readme_apache_2_license",
-      "community": 1,
+      "id": "readme_apache_2_0",
+      "community": 4,
       "norm_label": "apache 2.0 license"
-    },
-    {
-      "label": "Casbin Enforcer",
-      "file_type": "document",
-      "source_file": "README.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "readme_enforcer",
-      "community": 1,
-      "norm_label": "casbin enforcer"
     },
     {
       "label": "main branch origin record",
@@ -580,48 +729,9 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "x_fork_branch_origin",
+      "id": "branch_origin_main_record",
       "community": 4,
       "norm_label": "main branch origin record"
-    },
-    {
-      "label": "main branch",
-      "file_type": "document",
-      "source_file": "x_fork.branch-origin.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "x_fork_main_branch",
-      "community": 4,
-      "norm_label": "main branch"
-    },
-    {
-      "label": "master branch",
-      "file_type": "document",
-      "source_file": "x_fork.branch-origin.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "x_fork_master_branch",
-      "community": 4,
-      "norm_label": "master branch"
-    },
-    {
-      "label": "miso168net/fork260506-redis-watcher",
-      "file_type": "document",
-      "source_file": "x_fork.branch-origin.md",
-      "source_location": null,
-      "source_url": null,
-      "captured_at": null,
-      "author": null,
-      "contributor": null,
-      "id": "x_fork_repo_miso168net",
-      "community": 4,
-      "norm_label": "miso168net/fork260506-redis-watcher"
     },
     {
       "label": "casbin/redis-watcher (upstream)",
@@ -632,7 +742,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "x_fork_upstream_casbin",
+      "id": "branch_origin_upstream_casbin",
       "community": 4,
       "norm_label": "casbin/redis-watcher (upstream)"
     },
@@ -645,9 +755,22 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "x_fork_intermediate_go_admin",
+      "id": "branch_origin_intermediate_goadmin",
       "community": 4,
       "norm_label": "go-admin-team/redis-watcher (intermediate)"
+    },
+    {
+      "label": "miso168net/fork260506-redis-watcher",
+      "file_type": "document",
+      "source_file": "x_fork.branch-origin.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "branch_origin_fork_repo",
+      "community": 4,
+      "norm_label": "miso168net/fork260506-redis-watcher"
     },
     {
       "label": "HEAD bfe327c (Go 1.20 upgrade)",
@@ -658,35 +781,347 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "x_fork_head_bfe327c",
+      "id": "branch_origin_head_bfe327c",
       "community": 4,
       "norm_label": "head bfe327c (go 1.20 upgrade)"
     },
     {
       "label": "Rationale: unify default branch as main",
-      "file_type": "document",
+      "file_type": "rationale",
       "source_file": "x_fork.branch-origin.md",
       "source_location": null,
       "source_url": null,
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "x_fork_rationale_naming",
+      "id": "branch_origin_rationale_unify_main",
       "community": 4,
       "norm_label": "rationale: unify default branch as main"
     },
     {
-      "label": "Rationale: no squash/rebase, history preserved",
+      "label": "graphify session 2026-05-06",
       "file_type": "document",
-      "source_file": "x_fork.branch-origin.md",
+      "source_file": "x_fork.graphify-20260506.md",
       "source_location": null,
       "source_url": null,
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "id": "x_fork_rationale_no_rewrite",
+      "id": "graphify_session_20260506",
+      "community": 2,
+      "norm_label": "graphify session 2026-05-06"
+    },
+    {
+      "label": "God-node topology finding (Watcher)",
+      "file_type": "rationale",
+      "source_file": "x_fork.graphify-20260506.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "graphify_god_node_finding",
+      "community": 2,
+      "norm_label": "god-node topology finding (watcher)"
+    },
+    {
+      "label": "Cross-module call extraction limit",
+      "file_type": "rationale",
+      "source_file": "x_fork.graphify-20260506.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "graphify_cross_module_call_limit",
+      "community": 0,
+      "norm_label": "cross-module call extraction limit"
+    },
+    {
+      "label": "Project tree snapshot 2026-05-06",
+      "file_type": "document",
+      "source_file": "x_fork.tree-20260506.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "tree_snapshot_20260506",
+      "community": 2,
+      "norm_label": "project tree snapshot 2026-05-06"
+    },
+    {
+      "label": "Single-package layout convention",
+      "file_type": "rationale",
+      "source_file": "x_fork.tree-20260506.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "tree_single_package_convention",
+      "community": 2,
+      "norm_label": "single-package layout convention"
+    },
+    {
+      "label": "Struct-options pattern (functional options degenerate)",
+      "file_type": "rationale",
+      "source_file": "x_fork.tree-20260506.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "tree_options_struct_pattern",
+      "community": 1,
+      "norm_label": "struct-options pattern (functional options degenerate)"
+    },
+    {
+      "label": "README v8/v9 redis-client mismatch tech debt",
+      "file_type": "rationale",
+      "source_file": "x_fork.tree-20260506.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "tree_v8_v9_tech_debt",
       "community": 4,
-      "norm_label": "rationale: no squash/rebase, history preserved"
+      "norm_label": "readme v8/v9 redis-client mismatch tech debt"
+    },
+    {
+      "label": "Redis Watcher Retro Spec Design",
+      "file_type": "document",
+      "source_file": "docs/superpowers/specs/2026-05-07-redis-watcher-retro-spec-design.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "retrospec_design_doc",
+      "community": 2,
+      "norm_label": "redis watcher retro spec design"
+    },
+    {
+      "label": "FR-Wire (JSON wire format of MSG)",
+      "file_type": "rationale",
+      "source_file": "docs/superpowers/specs/2026-05-07-redis-watcher-retro-spec-design.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "retrospec_fr_wire",
+      "community": 3,
+      "norm_label": "fr-wire (json wire format of msg)"
+    },
+    {
+      "label": "FR-Methods (nine UpdateType constants)",
+      "file_type": "rationale",
+      "source_file": "docs/superpowers/specs/2026-05-07-redis-watcher-retro-spec-design.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "retrospec_fr_methods",
+      "community": 1,
+      "norm_label": "fr-methods (nine updatetype constants)"
+    },
+    {
+      "label": "FR-IgnoreSelf (filter logic)",
+      "file_type": "rationale",
+      "source_file": "docs/superpowers/specs/2026-05-07-redis-watcher-retro-spec-design.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "retrospec_fr_ignoreself",
+      "community": 1,
+      "norm_label": "fr-ignoreself (filter logic)"
+    },
+    {
+      "label": "FR-Defaults (Channel and LocalID defaults)",
+      "file_type": "rationale",
+      "source_file": "docs/superpowers/specs/2026-05-07-redis-watcher-retro-spec-design.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "retrospec_fr_defaults",
+      "community": 1,
+      "norm_label": "fr-defaults (channel and localid defaults)"
+    },
+    {
+      "label": "FR-CallbackContract (raw JSON payload)",
+      "file_type": "rationale",
+      "source_file": "docs/superpowers/specs/2026-05-07-redis-watcher-retro-spec-design.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "retrospec_fr_callbackcontract",
+      "community": 1,
+      "norm_label": "fr-callbackcontract (raw json payload)"
+    },
+    {
+      "label": "FR-DefaultCallback (dispatch via Self*)",
+      "file_type": "rationale",
+      "source_file": "docs/superpowers/specs/2026-05-07-redis-watcher-retro-spec-design.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "retrospec_fr_defaultcallback",
+      "community": 5,
+      "norm_label": "fr-defaultcallback (dispatch via self*)"
+    },
+    {
+      "label": "FR-PublishOnly (NewPublishWatcher gap)",
+      "file_type": "rationale",
+      "source_file": "docs/superpowers/specs/2026-05-07-redis-watcher-retro-spec-design.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "retrospec_fr_publishonly",
+      "community": 1,
+      "norm_label": "fr-publishonly (newpublishwatcher gap)"
+    },
+    {
+      "label": "FR-ClientInjection (type asymmetry)",
+      "file_type": "rationale",
+      "source_file": "docs/superpowers/specs/2026-05-07-redis-watcher-retro-spec-design.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "retrospec_fr_clientinjection",
+      "community": 1,
+      "norm_label": "fr-clientinjection (type asymmetry)"
+    },
+    {
+      "label": "Q1: Close publishes literal Close string",
+      "file_type": "rationale",
+      "source_file": "docs/superpowers/specs/2026-05-07-redis-watcher-retro-spec-design.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "retrospec_quirk_q1",
+      "community": 0,
+      "norm_label": "q1: close publishes literal close string"
+    },
+    {
+      "label": "Q2: select close-check ordering quirk",
+      "file_type": "rationale",
+      "source_file": "docs/superpowers/specs/2026-05-07-redis-watcher-retro-spec-design.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "retrospec_quirk_q2",
+      "community": 1,
+      "norm_label": "q2: select close-check ordering quirk"
+    },
+    {
+      "label": "Q3: README v8 vs code v9 mismatch",
+      "file_type": "rationale",
+      "source_file": "docs/superpowers/specs/2026-05-07-redis-watcher-retro-spec-design.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "retrospec_quirk_q3",
+      "community": 4,
+      "norm_label": "q3: readme v8 vs code v9 mismatch"
+    },
+    {
+      "label": "Q4: Ingnore typo in test name",
+      "file_type": "rationale",
+      "source_file": "docs/superpowers/specs/2026-05-07-redis-watcher-retro-spec-design.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "retrospec_quirk_q4",
+      "community": 0,
+      "norm_label": "q4: ingnore typo in test name"
+    },
+    {
+      "label": "US1: Subscribe to peer policy updates",
+      "file_type": "rationale",
+      "source_file": "docs/superpowers/specs/2026-05-07-redis-watcher-retro-spec-design.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "retrospec_us1",
+      "community": 0,
+      "norm_label": "us1: subscribe to peer policy updates"
+    },
+    {
+      "label": "US2: Publish own policy updates",
+      "file_type": "rationale",
+      "source_file": "docs/superpowers/specs/2026-05-07-redis-watcher-retro-spec-design.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "retrospec_us2",
+      "community": 3,
+      "norm_label": "us2: publish own policy updates"
+    },
+    {
+      "label": "US3: IgnoreSelf to avoid echo",
+      "file_type": "rationale",
+      "source_file": "docs/superpowers/specs/2026-05-07-redis-watcher-retro-spec-design.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "retrospec_us3",
+      "community": 0,
+      "norm_label": "us3: ignoreself to avoid echo"
+    },
+    {
+      "label": "US4: Cluster vs single-node parity",
+      "file_type": "rationale",
+      "source_file": "docs/superpowers/specs/2026-05-07-redis-watcher-retro-spec-design.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "retrospec_us4",
+      "community": 1,
+      "norm_label": "us4: cluster vs single-node parity"
+    },
+    {
+      "label": "Constitution v1.0.0",
+      "file_type": "document",
+      "source_file": "docs/superpowers/specs/2026-05-07-redis-watcher-retro-spec-design.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "retrospec_constitution_v1_0_0",
+      "community": 2,
+      "norm_label": "constitution v1.0.0"
     }
   ],
   "links": [
@@ -696,8 +1131,6 @@
       "source_file": "options.go",
       "source_location": "L8",
       "weight": 1.0,
-      "_src": "options_go",
-      "_tgt": "options_watcheroptions",
       "source": "options_go",
       "target": "options_watcheroptions",
       "confidence_score": 1.0
@@ -708,11 +1141,129 @@
       "source_file": "options.go",
       "source_location": "L19",
       "weight": 1.0,
-      "_src": "options_go",
-      "_tgt": "options_initconfig",
       "source": "options_go",
       "target": "options_initconfig",
       "confidence_score": 1.0
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "watcher.go",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "options_watcheroptions",
+      "target": "watcher_watcher"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "options.go",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "options_watcheroptions",
+      "target": "options_initconfig"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "watcher.go",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "options_watcheroptions",
+      "target": "watcher_initconfig"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "watcher.go",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "options_watcheroptions",
+      "target": "watcher_subscribe"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "x_fork.tree-20260506.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "options_watcheroptions",
+      "target": "tree_snapshot_20260506"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "x_fork.tree-20260506.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "options_watcheroptions",
+      "target": "tree_options_struct_pattern"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-05-07-redis-watcher-retro-spec-design.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "options_watcheroptions",
+      "target": "retrospec_design_doc"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-05-07-redis-watcher-retro-spec-design.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "options_watcheroptions",
+      "target": "retrospec_fr_clientinjection"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "watcher.go",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "options_initconfig",
+      "target": "watcher_newwatcher"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "watcher.go",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "options_initconfig",
+      "target": "watcher_newwatcherwithcluster"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "watcher.go",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "options_initconfig",
+      "target": "watcher_newpublishwatcher"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-05-07-redis-watcher-retro-spec-design.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "options_initconfig",
+      "target": "retrospec_fr_defaults"
     },
     {
       "relation": "contains",
@@ -720,8 +1271,6 @@
       "source_file": "watcher.go",
       "source_location": "L18",
       "weight": 1.0,
-      "_src": "watcher_go",
-      "_tgt": "watcher_watcher",
       "source": "watcher_go",
       "target": "watcher_watcher",
       "confidence_score": 1.0
@@ -732,8 +1281,6 @@
       "source_file": "watcher.go",
       "source_location": "L28",
       "weight": 1.0,
-      "_src": "watcher_go",
-      "_tgt": "watcher_defaultupdatecallback",
       "source": "watcher_go",
       "target": "watcher_defaultupdatecallback",
       "confidence_score": 1.0
@@ -744,8 +1291,6 @@
       "source_file": "watcher.go",
       "source_location": "L69",
       "weight": 1.0,
-      "_src": "watcher_go",
-      "_tgt": "watcher_msg",
       "source": "watcher_go",
       "target": "watcher_msg",
       "confidence_score": 1.0
@@ -756,8 +1301,6 @@
       "source_file": "watcher.go",
       "source_location": "L82",
       "weight": 1.0,
-      "_src": "watcher_go",
-      "_tgt": "watcher_updatetype",
       "source": "watcher_go",
       "target": "watcher_updatetype",
       "confidence_score": 1.0
@@ -768,8 +1311,6 @@
       "source_file": "watcher.go",
       "source_location": "L114",
       "weight": 1.0,
-      "_src": "watcher_go",
-      "_tgt": "watcher_newwatcher",
       "source": "watcher_go",
       "target": "watcher_newwatcher",
       "confidence_score": 1.0
@@ -780,8 +1321,6 @@
       "source_file": "watcher.go",
       "source_location": "L145",
       "weight": 1.0,
-      "_src": "watcher_go",
-      "_tgt": "watcher_newwatcherwithcluster",
       "source": "watcher_go",
       "target": "watcher_newwatcherwithcluster",
       "confidence_score": 1.0
@@ -792,8 +1331,6 @@
       "source_file": "watcher.go",
       "source_location": "L218",
       "weight": 1.0,
-      "_src": "watcher_go",
-      "_tgt": "watcher_newpublishwatcher",
       "source": "watcher_go",
       "target": "watcher_newpublishwatcher",
       "confidence_score": 1.0
@@ -804,8 +1341,6 @@
       "source_file": "watcher.go",
       "source_location": "L182",
       "weight": 1.0,
-      "_src": "watcher_watcher",
-      "_tgt": "watcher_watcher_initconfig",
       "source": "watcher_watcher",
       "target": "watcher_watcher_initconfig",
       "confidence_score": 1.0
@@ -816,8 +1351,6 @@
       "source_file": "watcher.go",
       "source_location": "L234",
       "weight": 1.0,
-      "_src": "watcher_watcher",
-      "_tgt": "watcher_watcher_setupdatecallback",
       "source": "watcher_watcher",
       "target": "watcher_watcher_setupdatecallback",
       "confidence_score": 1.0
@@ -828,8 +1361,6 @@
       "source_file": "watcher.go",
       "source_location": "L243",
       "weight": 1.0,
-      "_src": "watcher_watcher",
-      "_tgt": "watcher_watcher_update",
       "source": "watcher_watcher",
       "target": "watcher_watcher_update",
       "confidence_score": 1.0
@@ -840,8 +1371,6 @@
       "source_file": "watcher.go",
       "source_location": "L260",
       "weight": 1.0,
-      "_src": "watcher_watcher",
-      "_tgt": "watcher_watcher_updateforaddpolicy",
       "source": "watcher_watcher",
       "target": "watcher_watcher_updateforaddpolicy",
       "confidence_score": 1.0
@@ -852,8 +1381,6 @@
       "source_file": "watcher.go",
       "source_location": "L279",
       "weight": 1.0,
-      "_src": "watcher_watcher",
-      "_tgt": "watcher_watcher_updateforremovepolicy",
       "source": "watcher_watcher",
       "target": "watcher_watcher_updateforremovepolicy",
       "confidence_score": 1.0
@@ -864,8 +1391,6 @@
       "source_file": "watcher.go",
       "source_location": "L299",
       "weight": 1.0,
-      "_src": "watcher_watcher",
-      "_tgt": "watcher_watcher_updateforremovefilteredpolicy",
       "source": "watcher_watcher",
       "target": "watcher_watcher_updateforremovefilteredpolicy",
       "confidence_score": 1.0
@@ -876,8 +1401,6 @@
       "source_file": "watcher.go",
       "source_location": "L320",
       "weight": 1.0,
-      "_src": "watcher_watcher",
-      "_tgt": "watcher_watcher_updateforsavepolicy",
       "source": "watcher_watcher",
       "target": "watcher_watcher_updateforsavepolicy",
       "confidence_score": 1.0
@@ -888,8 +1411,6 @@
       "source_file": "watcher.go",
       "source_location": "L337",
       "weight": 1.0,
-      "_src": "watcher_watcher",
-      "_tgt": "watcher_watcher_updateforaddpolicies",
       "source": "watcher_watcher",
       "target": "watcher_watcher_updateforaddpolicies",
       "confidence_score": 1.0
@@ -900,8 +1421,6 @@
       "source_file": "watcher.go",
       "source_location": "L357",
       "weight": 1.0,
-      "_src": "watcher_watcher",
-      "_tgt": "watcher_watcher_updateforremovepolicies",
       "source": "watcher_watcher",
       "target": "watcher_watcher_updateforremovepolicies",
       "confidence_score": 1.0
@@ -912,8 +1431,6 @@
       "source_file": "watcher.go",
       "source_location": "L377",
       "weight": 1.0,
-      "_src": "watcher_watcher",
-      "_tgt": "watcher_watcher_updateforupdatepolicy",
       "source": "watcher_watcher",
       "target": "watcher_watcher_updateforupdatepolicy",
       "confidence_score": 1.0
@@ -924,8 +1441,6 @@
       "source_file": "watcher.go",
       "source_location": "L398",
       "weight": 1.0,
-      "_src": "watcher_watcher",
-      "_tgt": "watcher_watcher_updateforupdatepolicies",
       "source": "watcher_watcher",
       "target": "watcher_watcher_updateforupdatepolicies",
       "confidence_score": 1.0
@@ -936,8 +1451,6 @@
       "source_file": "watcher.go",
       "source_location": "L417",
       "weight": 1.0,
-      "_src": "watcher_watcher",
-      "_tgt": "watcher_watcher_logrecord",
       "source": "watcher_watcher",
       "target": "watcher_watcher_logrecord",
       "confidence_score": 1.0
@@ -948,8 +1461,6 @@
       "source_file": "watcher.go",
       "source_location": "L425",
       "weight": 1.0,
-      "_src": "watcher_watcher",
-      "_tgt": "watcher_watcher_unsubscribe",
       "source": "watcher_watcher",
       "target": "watcher_watcher_unsubscribe",
       "confidence_score": 1.0
@@ -960,8 +1471,6 @@
       "source_file": "watcher.go",
       "source_location": "L429",
       "weight": 1.0,
-      "_src": "watcher_watcher",
-      "_tgt": "watcher_watcher_subscribe",
       "source": "watcher_watcher",
       "target": "watcher_watcher_subscribe",
       "confidence_score": 1.0
@@ -972,8 +1481,6 @@
       "source_file": "watcher.go",
       "source_location": "L474",
       "weight": 1.0,
-      "_src": "watcher_watcher",
-      "_tgt": "watcher_watcher_getwatcheroptions",
       "source": "watcher_watcher",
       "target": "watcher_watcher_getwatcheroptions",
       "confidence_score": 1.0
@@ -984,11 +1491,49 @@
       "source_file": "watcher.go",
       "source_location": "L480",
       "weight": 1.0,
-      "_src": "watcher_watcher",
-      "_tgt": "watcher_watcher_close",
       "source": "watcher_watcher",
       "target": "watcher_watcher_close",
       "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "x_fork.graphify-20260506.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_watcher",
+      "target": "graphify_session_20260506"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "x_fork.graphify-20260506.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_watcher",
+      "target": "graphify_god_node_finding"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "x_fork.tree-20260506.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_watcher",
+      "target": "tree_snapshot_20260506"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-05-07-redis-watcher-retro-spec-design.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_watcher",
+      "target": "retrospec_design_doc"
     },
     {
       "relation": "calls",
@@ -996,23 +1541,50 @@
       "source_file": "watcher.go",
       "source_location": "L32",
       "weight": 1.0,
-      "_src": "watcher_defaultupdatecallback",
-      "_tgt": "watcher_msg_unmarshalbinary",
       "source": "watcher_defaultupdatecallback",
       "target": "watcher_msg_unmarshalbinary",
       "confidence_score": 1.0
     },
     {
       "relation": "calls",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
       "source_file": "watcher_test.go",
-      "source_location": "L37",
+      "source_location": null,
       "weight": 1.0,
-      "_src": "watcher_test_initwatcherwithoptions",
-      "_tgt": "watcher_defaultupdatecallback",
       "source": "watcher_defaultupdatecallback",
       "target": "watcher_test_initwatcherwithoptions"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "watcher.go",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_defaultupdatecallback",
+      "target": "watcher_unmarshalbinary"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_defaultupdatecallback",
+      "target": "readme_redis_watcher"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-05-07-redis-watcher-retro-spec-design.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_defaultupdatecallback",
+      "target": "retrospec_fr_defaultcallback"
     },
     {
       "relation": "method",
@@ -1020,8 +1592,6 @@
       "source_file": "watcher.go",
       "source_location": "L96",
       "weight": 1.0,
-      "_src": "watcher_msg",
-      "_tgt": "watcher_msg_marshalbinary",
       "source": "watcher_msg",
       "target": "watcher_msg_marshalbinary",
       "confidence_score": 1.0
@@ -1032,11 +1602,179 @@
       "source_file": "watcher.go",
       "source_location": "L101",
       "weight": 1.0,
-      "_src": "watcher_msg",
-      "_tgt": "watcher_msg_unmarshalbinary",
       "source": "watcher_msg",
       "target": "watcher_msg_unmarshalbinary",
       "confidence_score": 1.0
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "watcher.go",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_msg",
+      "target": "watcher_marshalbinary"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "watcher.go",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_msg",
+      "target": "watcher_unmarshalbinary"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "watcher.go",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_msg",
+      "target": "watcher_updatetype"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "watcher.go",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_msg",
+      "target": "watcher_update"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "watcher.go",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_msg",
+      "target": "watcher_updateforaddpolicy"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "watcher.go",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_msg",
+      "target": "watcher_updateforremovepolicy"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "watcher.go",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_msg",
+      "target": "watcher_updateforremovefilteredpolicy"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "watcher.go",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_msg",
+      "target": "watcher_updateforsavepolicy"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "watcher.go",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_msg",
+      "target": "watcher_updateforaddpolicies"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "watcher.go",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_msg",
+      "target": "watcher_updateforremovepolicies"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "watcher.go",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_msg",
+      "target": "watcher_updateforupdatepolicy"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "watcher.go",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_msg",
+      "target": "watcher_updateforupdatepolicies"
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "watcher.go",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_msg",
+      "target": "watcher_subscribe"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-05-07-redis-watcher-retro-spec-design.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_msg",
+      "target": "retrospec_design_doc"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-05-07-redis-watcher-retro-spec-design.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_msg",
+      "target": "retrospec_fr_wire"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-05-07-redis-watcher-retro-spec-design.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_updatetype",
+      "target": "retrospec_design_doc"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-05-07-redis-watcher-retro-spec-design.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_updatetype",
+      "target": "retrospec_fr_methods"
     },
     {
       "relation": "calls",
@@ -1044,21 +1782,18 @@
       "source_file": "watcher.go",
       "source_location": "L460",
       "weight": 1.0,
-      "_src": "watcher_watcher_subscribe",
-      "_tgt": "watcher_msg_unmarshalbinary",
       "source": "watcher_msg_unmarshalbinary",
       "target": "watcher_watcher_subscribe",
       "confidence_score": 1.0
     },
     {
       "relation": "calls",
+      "context": "call",
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "watcher_test.go",
       "source_location": "L96",
       "weight": 1.0,
-      "_src": "watcher_test_testupdate",
-      "_tgt": "watcher_msg_unmarshalbinary",
       "source": "watcher_msg_unmarshalbinary",
       "target": "watcher_test_testupdate"
     },
@@ -1068,8 +1803,6 @@
       "source_file": "watcher.go",
       "source_location": "L116",
       "weight": 1.0,
-      "_src": "watcher_newwatcher",
-      "_tgt": "watcher_watcher_initconfig",
       "source": "watcher_newwatcher",
       "target": "watcher_watcher_initconfig",
       "confidence_score": 1.0
@@ -1080,23 +1813,50 @@
       "source_file": "watcher.go",
       "source_location": "L135",
       "weight": 1.0,
-      "_src": "watcher_newwatcher",
-      "_tgt": "watcher_watcher_subscribe",
       "source": "watcher_newwatcher",
       "target": "watcher_watcher_subscribe",
       "confidence_score": 1.0
     },
     {
       "relation": "calls",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
       "source_file": "watcher_test.go",
-      "source_location": "L24",
+      "source_location": null,
       "weight": 1.0,
-      "_src": "watcher_test_initwatcherwithoptions",
-      "_tgt": "watcher_newwatcher",
       "source": "watcher_newwatcher",
       "target": "watcher_test_initwatcherwithoptions"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "watcher.go",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_newwatcher",
+      "target": "watcher_initconfig"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "watcher.go",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_newwatcher",
+      "target": "watcher_subscribe"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_newwatcher",
+      "target": "readme_redis_watcher"
     },
     {
       "relation": "calls",
@@ -1104,8 +1864,6 @@
       "source_file": "watcher.go",
       "source_location": "L148",
       "weight": 1.0,
-      "_src": "watcher_newwatcherwithcluster",
-      "_tgt": "watcher_watcher_initconfig",
       "source": "watcher_newwatcherwithcluster",
       "target": "watcher_watcher_initconfig",
       "confidence_score": 1.0
@@ -1116,23 +1874,60 @@
       "source_file": "watcher.go",
       "source_location": "L177",
       "weight": 1.0,
-      "_src": "watcher_newwatcherwithcluster",
-      "_tgt": "watcher_watcher_subscribe",
       "source": "watcher_newwatcherwithcluster",
       "target": "watcher_watcher_subscribe",
       "confidence_score": 1.0
     },
     {
       "relation": "calls",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
       "source_file": "watcher_test.go",
-      "source_location": "L22",
+      "source_location": null,
       "weight": 1.0,
-      "_src": "watcher_test_initwatcherwithoptions",
-      "_tgt": "watcher_newwatcherwithcluster",
       "source": "watcher_newwatcherwithcluster",
       "target": "watcher_test_initwatcherwithoptions"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "watcher.go",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_newwatcherwithcluster",
+      "target": "watcher_initconfig"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "watcher.go",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_newwatcherwithcluster",
+      "target": "watcher_subscribe"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_newwatcherwithcluster",
+      "target": "readme_redis_watcher"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-05-07-redis-watcher-retro-spec-design.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_newwatcherwithcluster",
+      "target": "retrospec_us4"
     },
     {
       "relation": "calls",
@@ -1140,8 +1935,6 @@
       "source_file": "watcher.go",
       "source_location": "L185",
       "weight": 1.0,
-      "_src": "watcher_watcher_initconfig",
-      "_tgt": "watcher_watcher_setupdatecallback",
       "source": "watcher_watcher_initconfig",
       "target": "watcher_watcher_setupdatecallback",
       "confidence_score": 1.0
@@ -1152,69 +1945,72 @@
       "source_file": "watcher.go",
       "source_location": "L226",
       "weight": 1.0,
-      "_src": "watcher_newpublishwatcher",
-      "_tgt": "watcher_watcher_initconfig",
       "source": "watcher_watcher_initconfig",
       "target": "watcher_newpublishwatcher",
       "confidence_score": 1.0
     },
     {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-05-07-redis-watcher-retro-spec-design.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_newpublishwatcher",
+      "target": "retrospec_fr_publishonly"
+    },
+    {
       "relation": "calls",
+      "context": "call",
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "watcher_test.go",
       "source_location": "L35",
       "weight": 1.0,
-      "_src": "watcher_test_initwatcherwithoptions",
-      "_tgt": "watcher_watcher_setupdatecallback",
       "source": "watcher_watcher_setupdatecallback",
       "target": "watcher_test_initwatcherwithoptions"
     },
     {
       "relation": "calls",
+      "context": "call",
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "watcher_test.go",
       "source_location": "L48",
       "weight": 1.0,
-      "_src": "watcher_test_testwatcher",
-      "_tgt": "watcher_watcher_setupdatecallback",
       "source": "watcher_watcher_setupdatecallback",
       "target": "watcher_test_testwatcher"
     },
     {
       "relation": "calls",
+      "context": "call",
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "watcher_test.go",
       "source_location": "L61",
       "weight": 1.0,
-      "_src": "watcher_test_testwatcherwithingnoreselffalse",
-      "_tgt": "watcher_watcher_setupdatecallback",
       "source": "watcher_watcher_setupdatecallback",
       "target": "watcher_test_testwatcherwithingnoreselffalse"
     },
     {
       "relation": "calls",
+      "context": "call",
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "watcher_test.go",
       "source_location": "L81",
       "weight": 1.0,
-      "_src": "watcher_test_testwatcherwithignoreselftrue",
-      "_tgt": "watcher_watcher_setupdatecallback",
       "source": "watcher_watcher_setupdatecallback",
       "target": "watcher_test_testwatcherwithignoreselftrue"
     },
     {
       "relation": "calls",
+      "context": "call",
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "watcher_test.go",
       "source_location": "L93",
       "weight": 1.0,
-      "_src": "watcher_test_testupdate",
-      "_tgt": "watcher_watcher_setupdatecallback",
       "source": "watcher_watcher_setupdatecallback",
       "target": "watcher_test_testupdate"
     },
@@ -1224,57 +2020,51 @@
       "source_file": "watcher.go",
       "source_location": "L244",
       "weight": 1.0,
-      "_src": "watcher_watcher_update",
-      "_tgt": "watcher_watcher_logrecord",
       "source": "watcher_watcher_update",
       "target": "watcher_watcher_logrecord",
       "confidence_score": 1.0
     },
     {
       "relation": "calls",
+      "context": "call",
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "watcher_test.go",
       "source_location": "L51",
       "weight": 1.0,
-      "_src": "watcher_test_testwatcher",
-      "_tgt": "watcher_watcher_update",
       "source": "watcher_watcher_update",
       "target": "watcher_test_testwatcher"
     },
     {
       "relation": "calls",
+      "context": "call",
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "watcher_test.go",
       "source_location": "L69",
       "weight": 1.0,
-      "_src": "watcher_test_testwatcherwithingnoreselffalse",
-      "_tgt": "watcher_watcher_update",
       "source": "watcher_watcher_update",
       "target": "watcher_test_testwatcherwithingnoreselffalse"
     },
     {
       "relation": "calls",
+      "context": "call",
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "watcher_test.go",
       "source_location": "L85",
       "weight": 1.0,
-      "_src": "watcher_test_testwatcherwithignoreselftrue",
-      "_tgt": "watcher_watcher_update",
       "source": "watcher_watcher_update",
       "target": "watcher_test_testwatcherwithignoreselftrue"
     },
     {
       "relation": "calls",
+      "context": "call",
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "watcher_test.go",
       "source_location": "L105",
       "weight": 1.0,
-      "_src": "watcher_test_testupdate",
-      "_tgt": "watcher_watcher_update",
       "source": "watcher_watcher_update",
       "target": "watcher_test_testupdate"
     },
@@ -1284,8 +2074,6 @@
       "source_file": "watcher.go",
       "source_location": "L261",
       "weight": 1.0,
-      "_src": "watcher_watcher_updateforaddpolicy",
-      "_tgt": "watcher_watcher_logrecord",
       "source": "watcher_watcher_updateforaddpolicy",
       "target": "watcher_watcher_logrecord",
       "confidence_score": 1.0
@@ -1296,8 +2084,6 @@
       "source_file": "watcher.go",
       "source_location": "L280",
       "weight": 1.0,
-      "_src": "watcher_watcher_updateforremovepolicy",
-      "_tgt": "watcher_watcher_logrecord",
       "source": "watcher_watcher_updateforremovepolicy",
       "target": "watcher_watcher_logrecord",
       "confidence_score": 1.0
@@ -1308,8 +2094,6 @@
       "source_file": "watcher.go",
       "source_location": "L300",
       "weight": 1.0,
-      "_src": "watcher_watcher_updateforremovefilteredpolicy",
-      "_tgt": "watcher_watcher_logrecord",
       "source": "watcher_watcher_updateforremovefilteredpolicy",
       "target": "watcher_watcher_logrecord",
       "confidence_score": 1.0
@@ -1320,8 +2104,6 @@
       "source_file": "watcher.go",
       "source_location": "L321",
       "weight": 1.0,
-      "_src": "watcher_watcher_updateforsavepolicy",
-      "_tgt": "watcher_watcher_logrecord",
       "source": "watcher_watcher_updateforsavepolicy",
       "target": "watcher_watcher_logrecord",
       "confidence_score": 1.0
@@ -1332,8 +2114,6 @@
       "source_file": "watcher.go",
       "source_location": "L338",
       "weight": 1.0,
-      "_src": "watcher_watcher_updateforaddpolicies",
-      "_tgt": "watcher_watcher_logrecord",
       "source": "watcher_watcher_updateforaddpolicies",
       "target": "watcher_watcher_logrecord",
       "confidence_score": 1.0
@@ -1344,8 +2124,6 @@
       "source_file": "watcher.go",
       "source_location": "L358",
       "weight": 1.0,
-      "_src": "watcher_watcher_updateforremovepolicies",
-      "_tgt": "watcher_watcher_logrecord",
       "source": "watcher_watcher_updateforremovepolicies",
       "target": "watcher_watcher_logrecord",
       "confidence_score": 1.0
@@ -1356,8 +2134,6 @@
       "source_file": "watcher.go",
       "source_location": "L378",
       "weight": 1.0,
-      "_src": "watcher_watcher_updateforupdatepolicy",
-      "_tgt": "watcher_watcher_logrecord",
       "source": "watcher_watcher_updateforupdatepolicy",
       "target": "watcher_watcher_logrecord",
       "confidence_score": 1.0
@@ -1368,8 +2144,6 @@
       "source_file": "watcher.go",
       "source_location": "L399",
       "weight": 1.0,
-      "_src": "watcher_watcher_updateforupdatepolicies",
-      "_tgt": "watcher_watcher_logrecord",
       "source": "watcher_watcher_updateforupdatepolicies",
       "target": "watcher_watcher_logrecord",
       "confidence_score": 1.0
@@ -1380,153 +2154,139 @@
       "source_file": "watcher.go",
       "source_location": "L437",
       "weight": 1.0,
-      "_src": "watcher_watcher_subscribe",
-      "_tgt": "watcher_watcher_close",
       "source": "watcher_watcher_subscribe",
       "target": "watcher_watcher_close",
       "confidence_score": 1.0
     },
     {
       "relation": "calls",
+      "context": "call",
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "watcher_test.go",
       "source_location": "L52",
       "weight": 1.0,
-      "_src": "watcher_test_testwatcher",
-      "_tgt": "watcher_watcher_close",
       "source": "watcher_watcher_close",
       "target": "watcher_test_testwatcher"
     },
     {
       "relation": "calls",
+      "context": "call",
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "watcher_test.go",
       "source_location": "L71",
       "weight": 1.0,
-      "_src": "watcher_test_testwatcherwithingnoreselffalse",
-      "_tgt": "watcher_watcher_close",
       "source": "watcher_watcher_close",
       "target": "watcher_test_testwatcherwithingnoreselffalse"
     },
     {
       "relation": "calls",
+      "context": "call",
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "watcher_test.go",
       "source_location": "L87",
       "weight": 1.0,
-      "_src": "watcher_test_testwatcherwithignoreselftrue",
-      "_tgt": "watcher_watcher_close",
       "source": "watcher_watcher_close",
       "target": "watcher_test_testwatcherwithignoreselftrue"
     },
     {
       "relation": "calls",
+      "context": "call",
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "watcher_test.go",
       "source_location": "L106",
       "weight": 1.0,
-      "_src": "watcher_test_testupdate",
-      "_tgt": "watcher_watcher_close",
       "source": "watcher_watcher_close",
       "target": "watcher_test_testupdate"
     },
     {
       "relation": "calls",
+      "context": "call",
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "watcher_test.go",
       "source_location": "L127",
       "weight": 1.0,
-      "_src": "watcher_test_testupdateforaddpolicy",
-      "_tgt": "watcher_watcher_close",
       "source": "watcher_watcher_close",
       "target": "watcher_test_testupdateforaddpolicy"
     },
     {
       "relation": "calls",
+      "context": "call",
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "watcher_test.go",
       "source_location": "L149",
       "weight": 1.0,
-      "_src": "watcher_test_testupdateforremovepolicy",
-      "_tgt": "watcher_watcher_close",
       "source": "watcher_watcher_close",
       "target": "watcher_test_testupdateforremovepolicy"
     },
     {
       "relation": "calls",
+      "context": "call",
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "watcher_test.go",
       "source_location": "L171",
       "weight": 1.0,
-      "_src": "watcher_test_testupdateforremovefilteredpolicy",
-      "_tgt": "watcher_watcher_close",
       "source": "watcher_watcher_close",
       "target": "watcher_test_testupdateforremovefilteredpolicy"
     },
     {
       "relation": "calls",
+      "context": "call",
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "watcher_test.go",
       "source_location": "L193",
       "weight": 1.0,
-      "_src": "watcher_test_testupdatesavepolicy",
-      "_tgt": "watcher_watcher_close",
       "source": "watcher_watcher_close",
       "target": "watcher_test_testupdatesavepolicy"
     },
     {
       "relation": "calls",
+      "context": "call",
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "watcher_test.go",
       "source_location": "L222",
       "weight": 1.0,
-      "_src": "watcher_test_testupdateforaddpolicies",
-      "_tgt": "watcher_watcher_close",
       "source": "watcher_watcher_close",
       "target": "watcher_test_testupdateforaddpolicies"
     },
     {
       "relation": "calls",
+      "context": "call",
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "watcher_test.go",
       "source_location": "L251",
       "weight": 1.0,
-      "_src": "watcher_test_testupdateforremovepolicies",
-      "_tgt": "watcher_watcher_close",
       "source": "watcher_watcher_close",
       "target": "watcher_test_testupdateforremovepolicies"
     },
     {
       "relation": "calls",
+      "context": "call",
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "watcher_test.go",
       "source_location": "L274",
       "weight": 1.0,
-      "_src": "watcher_test_testupdateforupdatepolicy",
-      "_tgt": "watcher_watcher_close",
       "source": "watcher_watcher_close",
       "target": "watcher_test_testupdateforupdatepolicy"
     },
     {
       "relation": "calls",
+      "context": "call",
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "watcher_test.go",
       "source_location": "L297",
       "weight": 1.0,
-      "_src": "watcher_test_testupdateforupdatepolicies",
-      "_tgt": "watcher_watcher_close",
       "source": "watcher_watcher_close",
       "target": "watcher_test_testupdateforupdatepolicies"
     },
@@ -1536,8 +2296,6 @@
       "source_file": "watcher_test.go",
       "source_location": "L16",
       "weight": 1.0,
-      "_src": "watcher_test_go",
-      "_tgt": "watcher_test_initwatcherwithoptions",
       "source": "watcher_test_go",
       "target": "watcher_test_initwatcherwithoptions",
       "confidence_score": 1.0
@@ -1548,8 +2306,6 @@
       "source_file": "watcher_test.go",
       "source_location": "L42",
       "weight": 1.0,
-      "_src": "watcher_test_go",
-      "_tgt": "watcher_test_initwatcher",
       "source": "watcher_test_go",
       "target": "watcher_test_initwatcher",
       "confidence_score": 1.0
@@ -1560,8 +2316,6 @@
       "source_file": "watcher_test.go",
       "source_location": "L46",
       "weight": 1.0,
-      "_src": "watcher_test_go",
-      "_tgt": "watcher_test_testwatcher",
       "source": "watcher_test_go",
       "target": "watcher_test_testwatcher",
       "confidence_score": 1.0
@@ -1572,8 +2326,6 @@
       "source_file": "watcher_test.go",
       "source_location": "L56",
       "weight": 1.0,
-      "_src": "watcher_test_go",
-      "_tgt": "watcher_test_testwatcherwithingnoreselffalse",
       "source": "watcher_test_go",
       "target": "watcher_test_testwatcherwithingnoreselffalse",
       "confidence_score": 1.0
@@ -1584,8 +2336,6 @@
       "source_file": "watcher_test.go",
       "source_location": "L75",
       "weight": 1.0,
-      "_src": "watcher_test_go",
-      "_tgt": "watcher_test_testwatcherwithignoreselftrue",
       "source": "watcher_test_go",
       "target": "watcher_test_testwatcherwithignoreselftrue",
       "confidence_score": 1.0
@@ -1596,8 +2346,6 @@
       "source_file": "watcher_test.go",
       "source_location": "L91",
       "weight": 1.0,
-      "_src": "watcher_test_go",
-      "_tgt": "watcher_test_testupdate",
       "source": "watcher_test_go",
       "target": "watcher_test_testupdate",
       "confidence_score": 1.0
@@ -1608,8 +2356,6 @@
       "source_file": "watcher_test.go",
       "source_location": "L110",
       "weight": 1.0,
-      "_src": "watcher_test_go",
-      "_tgt": "watcher_test_testupdateforaddpolicy",
       "source": "watcher_test_go",
       "target": "watcher_test_testupdateforaddpolicy",
       "confidence_score": 1.0
@@ -1620,8 +2366,6 @@
       "source_file": "watcher_test.go",
       "source_location": "L132",
       "weight": 1.0,
-      "_src": "watcher_test_go",
-      "_tgt": "watcher_test_testupdateforremovepolicy",
       "source": "watcher_test_go",
       "target": "watcher_test_testupdateforremovepolicy",
       "confidence_score": 1.0
@@ -1632,8 +2376,6 @@
       "source_file": "watcher_test.go",
       "source_location": "L154",
       "weight": 1.0,
-      "_src": "watcher_test_go",
-      "_tgt": "watcher_test_testupdateforremovefilteredpolicy",
       "source": "watcher_test_go",
       "target": "watcher_test_testupdateforremovefilteredpolicy",
       "confidence_score": 1.0
@@ -1644,8 +2386,6 @@
       "source_file": "watcher_test.go",
       "source_location": "L176",
       "weight": 1.0,
-      "_src": "watcher_test_go",
-      "_tgt": "watcher_test_testupdatesavepolicy",
       "source": "watcher_test_go",
       "target": "watcher_test_testupdatesavepolicy",
       "confidence_score": 1.0
@@ -1656,8 +2396,6 @@
       "source_file": "watcher_test.go",
       "source_location": "L198",
       "weight": 1.0,
-      "_src": "watcher_test_go",
-      "_tgt": "watcher_test_testupdateforaddpolicies",
       "source": "watcher_test_go",
       "target": "watcher_test_testupdateforaddpolicies",
       "confidence_score": 1.0
@@ -1668,8 +2406,6 @@
       "source_file": "watcher_test.go",
       "source_location": "L227",
       "weight": 1.0,
-      "_src": "watcher_test_go",
-      "_tgt": "watcher_test_testupdateforremovepolicies",
       "source": "watcher_test_go",
       "target": "watcher_test_testupdateforremovepolicies",
       "confidence_score": 1.0
@@ -1680,8 +2416,6 @@
       "source_file": "watcher_test.go",
       "source_location": "L256",
       "weight": 1.0,
-      "_src": "watcher_test_go",
-      "_tgt": "watcher_test_testupdateforupdatepolicy",
       "source": "watcher_test_go",
       "target": "watcher_test_testupdateforupdatepolicy",
       "confidence_score": 1.0
@@ -1692,8 +2426,6 @@
       "source_file": "watcher_test.go",
       "source_location": "L279",
       "weight": 1.0,
-      "_src": "watcher_test_go",
-      "_tgt": "watcher_test_testupdateforupdatepolicies",
       "source": "watcher_test_go",
       "target": "watcher_test_testupdateforupdatepolicies",
       "confidence_score": 1.0
@@ -1702,157 +2434,461 @@
       "relation": "calls",
       "confidence": "EXTRACTED",
       "source_file": "watcher_test.go",
-      "source_location": "L43",
+      "source_location": null,
       "weight": 1.0,
-      "_src": "watcher_test_initwatcher",
-      "_tgt": "watcher_test_initwatcherwithoptions",
+      "confidence_score": 1.0,
       "source": "watcher_test_initwatcherwithoptions",
-      "target": "watcher_test_initwatcher",
-      "confidence_score": 1.0
+      "target": "watcher_test_initwatcher"
     },
     {
       "relation": "calls",
       "confidence": "EXTRACTED",
       "source_file": "watcher_test.go",
-      "source_location": "L60",
+      "source_location": null,
       "weight": 1.0,
-      "_src": "watcher_test_testwatcherwithingnoreselffalse",
-      "_tgt": "watcher_test_initwatcherwithoptions",
+      "confidence_score": 1.0,
       "source": "watcher_test_initwatcherwithoptions",
-      "target": "watcher_test_testwatcherwithingnoreselffalse",
-      "confidence_score": 1.0
+      "target": "watcher_test_testwatcherwithingnoreselffalse"
     },
     {
       "relation": "calls",
       "confidence": "EXTRACTED",
       "source_file": "watcher_test.go",
-      "source_location": "L79",
+      "source_location": null,
       "weight": 1.0,
-      "_src": "watcher_test_testwatcherwithignoreselftrue",
-      "_tgt": "watcher_test_initwatcherwithoptions",
+      "confidence_score": 1.0,
       "source": "watcher_test_initwatcherwithoptions",
-      "target": "watcher_test_testwatcherwithignoreselftrue",
-      "confidence_score": 1.0
+      "target": "watcher_test_testwatcherwithignoreselftrue"
     },
     {
       "relation": "calls",
       "confidence": "EXTRACTED",
       "source_file": "watcher_test.go",
-      "source_location": "L114",
+      "source_location": null,
       "weight": 1.0,
-      "_src": "watcher_test_testupdateforaddpolicy",
-      "_tgt": "watcher_test_initwatcherwithoptions",
+      "confidence_score": 1.0,
       "source": "watcher_test_initwatcherwithoptions",
-      "target": "watcher_test_testupdateforaddpolicy",
-      "confidence_score": 1.0
+      "target": "watcher_test_testupdateforaddpolicy"
     },
     {
       "relation": "calls",
       "confidence": "EXTRACTED",
       "source_file": "watcher_test.go",
-      "source_location": "L136",
+      "source_location": null,
       "weight": 1.0,
-      "_src": "watcher_test_testupdateforremovepolicy",
-      "_tgt": "watcher_test_initwatcherwithoptions",
+      "confidence_score": 1.0,
       "source": "watcher_test_initwatcherwithoptions",
-      "target": "watcher_test_testupdateforremovepolicy",
-      "confidence_score": 1.0
+      "target": "watcher_test_testupdateforremovepolicy"
     },
     {
       "relation": "calls",
       "confidence": "EXTRACTED",
       "source_file": "watcher_test.go",
-      "source_location": "L158",
+      "source_location": null,
       "weight": 1.0,
-      "_src": "watcher_test_testupdateforremovefilteredpolicy",
-      "_tgt": "watcher_test_initwatcherwithoptions",
+      "confidence_score": 1.0,
       "source": "watcher_test_initwatcherwithoptions",
-      "target": "watcher_test_testupdateforremovefilteredpolicy",
-      "confidence_score": 1.0
+      "target": "watcher_test_testupdateforremovefilteredpolicy"
     },
     {
       "relation": "calls",
       "confidence": "EXTRACTED",
       "source_file": "watcher_test.go",
-      "source_location": "L180",
+      "source_location": null,
       "weight": 1.0,
-      "_src": "watcher_test_testupdatesavepolicy",
-      "_tgt": "watcher_test_initwatcherwithoptions",
+      "confidence_score": 1.0,
       "source": "watcher_test_initwatcherwithoptions",
-      "target": "watcher_test_testupdatesavepolicy",
-      "confidence_score": 1.0
+      "target": "watcher_test_testupdatesavepolicy"
     },
     {
       "relation": "calls",
       "confidence": "EXTRACTED",
       "source_file": "watcher_test.go",
-      "source_location": "L209",
+      "source_location": null,
       "weight": 1.0,
-      "_src": "watcher_test_testupdateforaddpolicies",
-      "_tgt": "watcher_test_initwatcherwithoptions",
+      "confidence_score": 1.0,
       "source": "watcher_test_initwatcherwithoptions",
-      "target": "watcher_test_testupdateforaddpolicies",
-      "confidence_score": 1.0
+      "target": "watcher_test_testupdateforaddpolicies"
     },
     {
       "relation": "calls",
       "confidence": "EXTRACTED",
       "source_file": "watcher_test.go",
-      "source_location": "L238",
+      "source_location": null,
       "weight": 1.0,
-      "_src": "watcher_test_testupdateforremovepolicies",
-      "_tgt": "watcher_test_initwatcherwithoptions",
+      "confidence_score": 1.0,
       "source": "watcher_test_initwatcherwithoptions",
-      "target": "watcher_test_testupdateforremovepolicies",
-      "confidence_score": 1.0
+      "target": "watcher_test_testupdateforremovepolicies"
     },
     {
       "relation": "calls",
       "confidence": "EXTRACTED",
       "source_file": "watcher_test.go",
-      "source_location": "L260",
+      "source_location": null,
       "weight": 1.0,
-      "_src": "watcher_test_testupdateforupdatepolicy",
-      "_tgt": "watcher_test_initwatcherwithoptions",
+      "confidence_score": 1.0,
       "source": "watcher_test_initwatcherwithoptions",
-      "target": "watcher_test_testupdateforupdatepolicy",
-      "confidence_score": 1.0
+      "target": "watcher_test_testupdateforupdatepolicy"
     },
     {
       "relation": "calls",
       "confidence": "EXTRACTED",
       "source_file": "watcher_test.go",
-      "source_location": "L283",
+      "source_location": null,
       "weight": 1.0,
-      "_src": "watcher_test_testupdateforupdatepolicies",
-      "_tgt": "watcher_test_initwatcherwithoptions",
+      "confidence_score": 1.0,
       "source": "watcher_test_initwatcherwithoptions",
-      "target": "watcher_test_testupdateforupdatepolicies",
-      "confidence_score": 1.0
+      "target": "watcher_test_testupdateforupdatepolicies"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "watcher_test.go",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_test_initwatcherwithoptions",
+      "target": "watcher_setupdatecallback"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "x_fork.graphify-20260506.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_test_initwatcherwithoptions",
+      "target": "graphify_session_20260506"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "x_fork.graphify-20260506.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_test_initwatcherwithoptions",
+      "target": "graphify_cross_module_call_limit"
     },
     {
       "relation": "calls",
       "confidence": "EXTRACTED",
       "source_file": "watcher_test.go",
-      "source_location": "L47",
+      "source_location": null,
       "weight": 1.0,
-      "_src": "watcher_test_testwatcher",
-      "_tgt": "watcher_test_initwatcher",
+      "confidence_score": 1.0,
       "source": "watcher_test_initwatcher",
-      "target": "watcher_test_testwatcher",
-      "confidence_score": 1.0
+      "target": "watcher_test_testwatcher"
     },
     {
       "relation": "calls",
       "confidence": "EXTRACTED",
       "source_file": "watcher_test.go",
-      "source_location": "L92",
+      "source_location": null,
       "weight": 1.0,
-      "_src": "watcher_test_testupdate",
-      "_tgt": "watcher_test_initwatcher",
+      "confidence_score": 1.0,
       "source": "watcher_test_initwatcher",
-      "target": "watcher_test_testupdate",
-      "confidence_score": 1.0
+      "target": "watcher_test_testupdate"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "watcher_test.go",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_test_testwatcher",
+      "target": "watcher_update"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "watcher_test.go",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_test_testwatcher",
+      "target": "watcher_close"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "watcher_test.go",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_test_testwatcherwithingnoreselffalse",
+      "target": "watcher_update"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-05-07-redis-watcher-retro-spec-design.md",
+      "source_file_alt": null,
+      "weight": 1.0,
+      "source": "watcher_test_testwatcherwithingnoreselffalse",
+      "target": "retrospec_quirk_q4"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-05-07-redis-watcher-retro-spec-design.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_test_testwatcherwithingnoreselffalse",
+      "target": "retrospec_us3"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "watcher_test.go",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_test_testwatcherwithignoreselftrue",
+      "target": "watcher_update"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-05-07-redis-watcher-retro-spec-design.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_test_testwatcherwithignoreselftrue",
+      "target": "retrospec_us3"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "watcher_test.go",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_test_testupdate",
+      "target": "watcher_unmarshalbinary"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "watcher_test.go",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_test_testupdate",
+      "target": "watcher_update"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-05-07-redis-watcher-retro-spec-design.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_test_testupdate",
+      "target": "retrospec_us1"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "watcher.go",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_setupdatecallback",
+      "target": "watcher_initconfig"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-05-07-redis-watcher-retro-spec-design.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_setupdatecallback",
+      "target": "retrospec_fr_callbackcontract"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "watcher.go",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_subscribe",
+      "target": "watcher_unmarshalbinary"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-05-07-redis-watcher-retro-spec-design.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_subscribe",
+      "target": "retrospec_fr_ignoreself"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-05-07-redis-watcher-retro-spec-design.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_subscribe",
+      "target": "retrospec_fr_callbackcontract"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-05-07-redis-watcher-retro-spec-design.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_subscribe",
+      "target": "retrospec_quirk_q2"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "watcher.go",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_logrecord",
+      "target": "watcher_update"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "watcher.go",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_logrecord",
+      "target": "watcher_updateforaddpolicy"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "watcher.go",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_logrecord",
+      "target": "watcher_updateforremovepolicy"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "watcher.go",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_logrecord",
+      "target": "watcher_updateforremovefilteredpolicy"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "watcher.go",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_logrecord",
+      "target": "watcher_updateforsavepolicy"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "watcher.go",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_logrecord",
+      "target": "watcher_updateforaddpolicies"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "watcher.go",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_logrecord",
+      "target": "watcher_updateforremovepolicies"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "watcher.go",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_logrecord",
+      "target": "watcher_updateforupdatepolicy"
+    },
+    {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "watcher.go",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_logrecord",
+      "target": "watcher_updateforupdatepolicies"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-05-07-redis-watcher-retro-spec-design.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_update",
+      "target": "retrospec_us2"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-05-07-redis-watcher-retro-spec-design.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_close",
+      "target": "retrospec_quirk_q1"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-05-07-redis-watcher-retro-spec-design.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_marshalbinary",
+      "target": "retrospec_fr_wire"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-05-07-redis-watcher-retro-spec-design.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "watcher_unmarshalbinary",
+      "target": "retrospec_fr_wire"
+    },
+    {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "CLAUDE.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "claude_md_graphify_rules",
+      "target": "graphify_session_20260506"
     },
     {
       "relation": "references",
@@ -1861,20 +2897,6 @@
       "source_file": "README.md",
       "source_location": null,
       "weight": 1.0,
-      "_src": "readme_redis_watcher",
-      "_tgt": "readme_redis",
-      "source": "readme_redis_watcher",
-      "target": "readme_redis"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 1.0,
-      "_src": "readme_redis_watcher",
-      "_tgt": "readme_casbin",
       "source": "readme_redis_watcher",
       "target": "readme_casbin"
     },
@@ -1885,8 +2907,6 @@
       "source_file": "README.md",
       "source_location": null,
       "weight": 1.0,
-      "_src": "readme_redis_watcher",
-      "_tgt": "readme_go_redis",
       "source": "readme_redis_watcher",
       "target": "readme_go_redis"
     },
@@ -1897,142 +2917,78 @@
       "source_file": "README.md",
       "source_location": null,
       "weight": 1.0,
-      "_src": "readme_redis_watcher",
-      "_tgt": "readme_new_watcher",
       "source": "readme_redis_watcher",
-      "target": "readme_new_watcher"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 1.0,
-      "_src": "readme_redis_watcher",
-      "_tgt": "readme_new_watcher_with_cluster",
-      "source": "readme_redis_watcher",
-      "target": "readme_new_watcher_with_cluster"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 1.0,
-      "_src": "readme_set_watcher",
-      "_tgt": "readme_redis_watcher",
-      "source": "readme_redis_watcher",
-      "target": "readme_set_watcher"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 1.0,
-      "_src": "readme_redis_watcher",
-      "_tgt": "readme_set_update_callback",
-      "source": "readme_redis_watcher",
-      "target": "readme_set_update_callback"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 1.0,
-      "_src": "readme_redis_watcher",
-      "_tgt": "readme_apache_2_license",
-      "source": "readme_redis_watcher",
-      "target": "readme_apache_2_license"
+      "target": "readme_apache_2_0"
     },
     {
       "relation": "semantically_similar_to",
       "confidence": "INFERRED",
       "confidence_score": 0.85,
-      "source_file": "x_fork.branch-origin.md",
+      "source_file": "README.md",
       "source_location": null,
       "weight": 1.0,
-      "_src": "x_fork_upstream_casbin",
-      "_tgt": "readme_redis_watcher",
       "source": "readme_redis_watcher",
-      "target": "x_fork_upstream_casbin"
+      "target": "branch_origin_upstream_casbin"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "x_fork.tree-20260506.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_redis_watcher",
+      "target": "tree_v8_v9_tech_debt"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-05-07-redis-watcher-retro-spec-design.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_redis_watcher",
+      "target": "retrospec_quirk_q3"
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "README.md",
+      "source_file": "x_fork.branch-origin.md",
       "source_location": null,
       "weight": 1.0,
-      "_src": "readme_enforcer",
-      "_tgt": "readme_casbin",
-      "source": "readme_casbin",
-      "target": "readme_enforcer"
+      "source": "branch_origin_main_record",
+      "target": "branch_origin_fork_repo"
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "README.md",
+      "source_file": "x_fork.branch-origin.md",
       "source_location": null,
       "weight": 1.0,
-      "_src": "readme_new_watcher",
-      "_tgt": "readme_watcher_options",
-      "source": "readme_new_watcher",
-      "target": "readme_watcher_options"
+      "source": "branch_origin_main_record",
+      "target": "branch_origin_upstream_casbin"
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "README.md",
+      "source_file": "x_fork.branch-origin.md",
       "source_location": null,
       "weight": 1.0,
-      "_src": "readme_new_watcher_with_cluster",
-      "_tgt": "readme_watcher_options",
-      "source": "readme_new_watcher_with_cluster",
-      "target": "readme_watcher_options"
-    },
-    {
-      "relation": "calls",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 1.0,
-      "_src": "readme_enforcer",
-      "_tgt": "readme_set_watcher",
-      "source": "readme_set_watcher",
-      "target": "readme_enforcer"
+      "source": "branch_origin_main_record",
+      "target": "branch_origin_intermediate_goadmin"
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "README.md",
+      "source_file": "x_fork.branch-origin.md",
       "source_location": null,
       "weight": 1.0,
-      "_src": "readme_set_update_callback",
-      "_tgt": "readme_default_update_callback",
-      "source": "readme_set_update_callback",
-      "target": "readme_default_update_callback"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": null,
-      "weight": 1.0,
-      "_src": "readme_default_update_callback",
-      "_tgt": "readme_enforcer",
-      "source": "readme_default_update_callback",
-      "target": "readme_enforcer"
+      "source": "branch_origin_main_record",
+      "target": "branch_origin_head_bfe327c"
     },
     {
       "relation": "rationale_for",
@@ -2041,133 +2997,106 @@
       "source_file": "x_fork.branch-origin.md",
       "source_location": null,
       "weight": 1.0,
-      "_src": "x_fork_rationale_no_rewrite",
-      "_tgt": "x_fork_branch_origin",
-      "source": "x_fork_branch_origin",
-      "target": "x_fork_rationale_no_rewrite"
+      "source": "branch_origin_main_record",
+      "target": "branch_origin_rationale_unify_main"
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "x_fork.branch-origin.md",
+      "source_file": "x_fork.tree-20260506.md",
       "source_location": null,
       "weight": 1.0,
-      "_src": "x_fork_branch_origin",
-      "_tgt": "x_fork_repo_miso168net",
-      "source": "x_fork_branch_origin",
-      "target": "x_fork_repo_miso168net"
+      "source": "branch_origin_main_record",
+      "target": "tree_snapshot_20260506"
     },
     {
       "relation": "references",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "x_fork.branch-origin.md",
+      "source_file": "x_fork.tree-20260506.md",
       "source_location": null,
       "weight": 1.0,
-      "_src": "x_fork_main_branch",
-      "_tgt": "x_fork_master_branch",
-      "source": "x_fork_main_branch",
-      "target": "x_fork_master_branch"
+      "source": "graphify_session_20260506",
+      "target": "tree_snapshot_20260506"
     },
     {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "x_fork.branch-origin.md",
+      "relation": "semantically_similar_to",
+      "confidence": "INFERRED",
+      "confidence_score": 0.75,
+      "source_file": "docs/superpowers/specs/2026-05-07-redis-watcher-retro-spec-design.md",
       "source_location": null,
       "weight": 1.0,
-      "_src": "x_fork_main_branch",
-      "_tgt": "x_fork_head_bfe327c",
-      "source": "x_fork_main_branch",
-      "target": "x_fork_head_bfe327c"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "x_fork.branch-origin.md",
-      "source_location": null,
-      "weight": 1.0,
-      "_src": "x_fork_repo_miso168net",
-      "_tgt": "x_fork_main_branch",
-      "source": "x_fork_main_branch",
-      "target": "x_fork_repo_miso168net"
+      "source": "graphify_session_20260506",
+      "target": "retrospec_design_doc"
     },
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "x_fork.branch-origin.md",
+      "source_file": "x_fork.tree-20260506.md",
       "source_location": null,
       "weight": 1.0,
-      "_src": "x_fork_rationale_naming",
-      "_tgt": "x_fork_main_branch",
-      "source": "x_fork_main_branch",
-      "target": "x_fork_rationale_naming"
+      "source": "tree_snapshot_20260506",
+      "target": "tree_single_package_convention"
     },
     {
-      "relation": "references",
+      "relation": "cites",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "x_fork.branch-origin.md",
+      "source_file": "docs/superpowers/specs/2026-05-07-redis-watcher-retro-spec-design.md",
       "source_location": null,
       "weight": 1.0,
-      "_src": "x_fork_repo_miso168net",
-      "_tgt": "x_fork_master_branch",
-      "source": "x_fork_master_branch",
-      "target": "x_fork_repo_miso168net"
-    },
-    {
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "x_fork.branch-origin.md",
-      "source_location": null,
-      "weight": 1.0,
-      "_src": "x_fork_repo_miso168net",
-      "_tgt": "x_fork_upstream_casbin",
-      "source": "x_fork_repo_miso168net",
-      "target": "x_fork_upstream_casbin"
-    },
-    {
-      "relation": "references",
-      "confidence": "AMBIGUOUS",
-      "confidence_score": 0.3,
-      "source_file": "x_fork.branch-origin.md",
-      "source_location": null,
-      "weight": 1.0,
-      "_src": "x_fork_repo_miso168net",
-      "_tgt": "x_fork_intermediate_go_admin",
-      "source": "x_fork_repo_miso168net",
-      "target": "x_fork_intermediate_go_admin"
-    },
-    {
-      "relation": "references",
-      "confidence": "AMBIGUOUS",
-      "confidence_score": 0.3,
-      "source_file": "x_fork.branch-origin.md",
-      "source_location": null,
-      "weight": 1.0,
-      "_src": "x_fork_intermediate_go_admin",
-      "_tgt": "x_fork_upstream_casbin",
-      "source": "x_fork_upstream_casbin",
-      "target": "x_fork_intermediate_go_admin"
+      "source": "retrospec_design_doc",
+      "target": "retrospec_constitution_v1_0_0"
     }
   ],
   "hyperedges": [
     {
-      "id": "watcher_setup_flow",
-      "label": "Watcher setup flow (init -> bind enforcer -> set callback)",
+      "id": "policy_publish_pubsub_flow",
+      "label": "Policy publish/subscribe flow",
       "nodes": [
-        "readme_new_watcher",
-        "readme_set_watcher",
-        "readme_set_update_callback",
-        "readme_enforcer"
+        "watcher_subscribe",
+        "watcher_msg",
+        "watcher_defaultupdatecallback",
+        "watcher_setupdatecallback",
+        "watcher_updatetype"
       ],
+      "relation": "participate_in",
       "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md"
+      "confidence_score": 0.9,
+      "source_file": "watcher.go"
+    },
+    {
+      "id": "watcher_construction_paths",
+      "label": "Watcher construction paths (single, cluster, publish-only)",
+      "nodes": [
+        "watcher_newwatcher",
+        "watcher_newwatcherwithcluster",
+        "watcher_newpublishwatcher",
+        "watcher_initconfig",
+        "options_initconfig"
+      ],
+      "relation": "participate_in",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.9,
+      "source_file": "watcher.go"
+    },
+    {
+      "id": "retrospec_baseline_capture",
+      "label": "Retro spec baseline capture (design + sources)",
+      "nodes": [
+        "retrospec_design_doc",
+        "watcher_watcher",
+        "options_watcheroptions",
+        "watcher_msg",
+        "graphify_session_20260506"
+      ],
+      "relation": "form",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "docs/superpowers/specs/2026-05-07-redis-watcher-retro-spec-design.md"
     }
-  ]
+  ],
+  "built_at_commit": "71a75c4934bae72c2ec166a9e806700915999c62"
 }
